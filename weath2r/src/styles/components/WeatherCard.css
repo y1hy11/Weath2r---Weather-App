@@ -1,5 +1,6 @@
 .weather-card {
-  background: var(--bg-light);
+  background: white;
+  border: 1px solid #e2e8f0;
   border-radius: var(--border-radius);
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -44,11 +45,10 @@
   color: var(--primary-color);
   margin: 0;
   transition: color 0.3s ease;
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% 200%;
-  animation: gradient 5s ease infinite;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  color: var(--primary-color);
 }
 
 .weather-card:hover .weather-info h3 {
@@ -69,6 +69,7 @@
   background: var(--bg-dark);
   color: var(--text-dark);
   box-shadow: 0 4px 6px rgba(255, 255, 255, 0.05);
+  border-color: #1e293b;
 }
 
 .dark-mode .weather-card:hover {

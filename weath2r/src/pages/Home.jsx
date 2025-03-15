@@ -42,7 +42,6 @@ export default function Home() {
 
   return (
     <div className="home">
-      <h1>Weath2r | Your Trusted Weather App</h1>
       <SearchBar />
       {weather && (
         <>

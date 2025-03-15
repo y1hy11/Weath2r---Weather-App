@@ -2,10 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   background-color: var(--bg-light);
   box-shadow: var(--box-shadow);
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 1000;
   backdrop-filter: blur(10px);
@@ -20,22 +20,19 @@
 .navbar-brand a {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
   text-decoration: none;
   color: var(--primary-color);
   font-weight: bold;
 }
 
 .logo {
-  font-size: 1.8rem;
-  animation: float 3s ease-in-out infinite;
+  height: 50px;
+  width: auto;
+  transition: transform 0.3s ease;
 }
 
-.brand-text {
-  font-size: 1.5rem;
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.logo:hover {
+  transform: scale(1.05);
 }
 
 .navbar-links {
@@ -47,7 +44,7 @@
 .navbar-links a {
   text-decoration: none;
   color: var(--text-light);
-  font-weight: 500;
+  font-size: 1.2rem;
   position: relative;
   padding: 0.5rem 0;
 }
@@ -68,25 +65,18 @@
   width: 100%;
 }
 
-.theme-toggle,
-.units-toggle {
+.theme-toggle {
   background: none;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   cursor: pointer;
   padding: 0.5rem;
   border-radius: var(--border-radius);
   transition: all 0.3s ease;
 }
 
-.theme-toggle:hover,
-.units-toggle:hover {
+.theme-toggle:hover {
   transform: rotate(15deg) scale(1.1);
-}
-
-.units-toggle {
-  font-weight: bold;
-  color: var(--primary-color);
 }
 
 @keyframes float {

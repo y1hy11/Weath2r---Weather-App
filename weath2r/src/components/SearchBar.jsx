@@ -27,6 +27,8 @@ export default function SearchBar() {
 
   return (
     <div className="search-container">
+        <h1>Weath2r | Your Trusted Weather App</h1>
+        <h2>Search for a location</h2>
       <input
         type="text"
         value={query}
