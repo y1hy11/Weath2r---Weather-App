@@ -6,6 +6,7 @@
 @import '../styles/components/Weather.css';
 @import '../styles/components/WeatherCard.css';
 @import '../styles/components/WeatherMap.css';
+@import '../styles/components/WeatherStats.css';
 @import '../styles/components/CurrentWeather.css';
 @import '../styles/components/Forecast.css';
 @import '../styles/components/ErrorBoundary.css';

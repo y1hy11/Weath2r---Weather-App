@@ -1,12 +1,17 @@
+@import 'leaflet/dist/leaflet.css';
+
 .weather-map {
   height: 400px;
+  width: 100%;
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: var(--box-shadow);
   margin: 2rem 0;
   position: relative;
+  z-index: 1;
   transition: transform 0.3s var(--animation-timing),
               box-shadow 0.3s var(--animation-timing);
+  background-color: var(--bg-light);
 }
 
 .weather-map::before {
@@ -34,12 +39,82 @@
   transform: scale(1.2) translateY(-5px);
 }
 
+.custom-marker {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 40px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
 .leaflet-container {
   height: 100%;
   width: 100%;
   z-index: 1;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.leaflet-control-container {
+  position: absolute;
+  z-index: 2;
 }
 
 .dark-mode .leaflet-tile {
   filter: invert(1) hue-rotate(180deg);
+}
+
+.dark-theme .leaflet-tile {
+  filter: invert(1) hue-rotate(180deg) brightness(0.9);
+}
+
+.dark-theme .leaflet-container {
+  background: #333;
+}
+
+.leaflet-control-attribution {
+  font-size: 10px;
+}
+
+.map-error {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-light);
+  color: var(--text-light);
+  border-radius: var(--border-radius);
+  border: 2px dashed var(--primary-color);
+}
+
+/* Fix Leaflet controls in dark mode */
+.dark-theme .leaflet-control-zoom a {
+  color: #000;
+  background: #fff;
+}
+
+.leaflet-map-pane {
+  z-index: 1;
+}
+
+.leaflet-tile-pane {
+  z-index: 1;
+}
+
+/* Ensure map is visible in containers */
+.home .weather-map {
+  min-height: 400px;
+  display: block;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .weather-map {
+    height: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .weather-map {
+    height: 500px;
+  }
 }

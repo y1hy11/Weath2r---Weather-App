@@ -42,16 +42,21 @@ export default function Home() {
 
   return (
     <div className="home">
+      <h1>Weath2r | Your Trusted Weather App</h1>
       <SearchBar />
       {weather && (
         <>
           <CurrentWeather data={weather.current} />
+          {/* Log data structure for debugging */}
+          {console.log('Weather Data:', weather)}
+          <Forecast data={weather.forecast?.forecast} />
           <WeatherStats data={weather.current.current} />
-          <Forecast data={weather.forecast} />
-          <WeatherMap 
-            lat={weather.current.location.lat} 
-            lon={weather.current.location.lon} 
-          />
+          {weather.current.location.lat && weather.current.location.lon && (
+            <WeatherMap 
+              lat={Number(weather.current.location.lat)} 
+              lon={Number(weather.current.location.lon)} 
+            />
+          )}
         </>
       )}
     </div>

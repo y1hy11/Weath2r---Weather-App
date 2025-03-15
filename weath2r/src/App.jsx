@@ -6,7 +6,9 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import PrivacyPolicy from './pages/Privacy&Policy';
 import './styles/App.css';
+import 'leaflet/dist/leaflet.css';
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
