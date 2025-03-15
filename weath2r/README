@@ -6,6 +6,7 @@ A modern weather application built with React that provides detailed weather inf
 
 - Real-time weather data display
 - 5-day weather forecast
+- Interactive Weather Map visualization
 - Search for weather by city name
 - Responsive design for all devices
 - Temperature units conversion (Celsius/Fahrenheit)
@@ -20,11 +21,24 @@ Advanced-Weather_App_react/
 │   ├── index.html
 │   └── assets/
 ├── src/
+|   ├── pages/
+|   │   ├── Home.jsx
+|   │   └── NotFound.jsx
+│   |   └── Contact.jsx
+│   |   └── Privacy&Policy.jsx
+│   |   └── Terms&Conditions.jsx
+│   |   └── About.jsx
+│   ├── context/
+│   │   └── WeatherContext.js
+│   |   └── AppContext.js
 │   ├── components/
-│   │   ├── CurrentWeather/
-│   │   ├── Forecast/
-│   │   ├── Search/
-│   │   └── WeatherCard/
+|   |   └──Navbar.jsx
+│   │   ├── Footer.jsx
+│   │   ├── CurrentWeatherjsx
+│   │   ├── Forecast.jsx
+│   │   ├── SearchBar.jsx
+│   │   ├── WeatherMap.jsx
+│   │   └── WeatherCard.jsx
 │   ├── services/
 │   │   └── api/
 │   ├── utils/
@@ -42,6 +56,7 @@ Advanced-Weather_App_react/
 - Weather API
 - Axios for API requests
 - React Icons
+- Leaflet.js for interactive maps
 
 ## Getting Started
 
