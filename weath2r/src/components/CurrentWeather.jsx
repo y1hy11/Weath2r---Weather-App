@@ -2,7 +2,23 @@ import { motion } from 'framer-motion';
 import { useApp } from '../context/AppContext';
 
 export default function CurrentWeather({ data }) {
-  const { units } = useApp();
+  const { units, setUnits } = useApp();
+  
+  const toggleUnits = () => {
+    setUnits(units === 'celsius' ? 'fahrenheit' : 'celsius');
+  };
+
+  const localTime = new Date(data.location.localtime);
+  const formattedTime = localTime.toLocaleTimeString('en-US', {
+    hour: '2-digit',
+    minute: '2-digit',
+  });
+  const formattedDate = localTime.toLocaleDateString('en-US', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
 
   return (
     <motion.div 
@@ -13,9 +29,15 @@ export default function CurrentWeather({ data }) {
     >
       <div className="current-weather-main">
         <h2>{data.location.name}, {data.location.country}</h2>
+        <div className="datetime">
+          <p className="time">{formattedTime}</p>
+          <p className="date">{formattedDate}</p>
+        </div>
         <div className="current-temp">
           <span className="temp">{units === 'celsius' ? data.current.temp_c : data.current.temp_f}°</span>
-          <span className="unit">{units === 'celsius' ? 'C' : 'F'}</span>
+          <button onClick={toggleUnits} className="unit-toggle">
+            {units === 'celsius' ? 'C' : 'F'}
+          </button>
         </div>
       </div>
       <div className="weather-details-grid">

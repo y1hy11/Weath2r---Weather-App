@@ -5,11 +5,37 @@
   padding: 1rem 2rem;
   background-color: var(--bg-light);
   box-shadow: var(--box-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  background-color: rgba(var(--bg-light), 0.8);
 }
 
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.navbar-brand a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.logo {
+  font-size: 1.8rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.brand-text {
+  font-size: 1.5rem;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .navbar-links {
@@ -21,14 +47,15 @@
 .navbar-links a {
   text-decoration: none;
   color: var(--text-light);
-  transition: var(--transition);
+  font-weight: 500;
   position: relative;
+  padding: 0.5rem 0;
 }
 
 .navbar-links a::after {
   content: '';
   position: absolute;
-  bottom: -2px;
+  bottom: 0;
   left: 0;
   width: 0;
   height: 2px;
@@ -36,26 +63,55 @@
   transition: width 0.3s ease;
 }
 
-.navbar-links a:hover::after {
+.navbar-links a:hover::after,
+.navbar-links a.active::after {
   width: 100%;
 }
 
-.theme-toggle {
+.theme-toggle,
+.units-toggle {
   background: none;
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
   padding: 0.5rem;
   border-radius: var(--border-radius);
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.theme-toggle:hover {
-  transform: rotate(45deg);
+.theme-toggle:hover,
+.units-toggle:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+
+.units-toggle {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.dark-mode .navbar {
+  background-color: rgba(var(--bg-dark), 0.8);
+}
+
+.dark-mode .navbar-links a {
+  color: var(--text-dark);
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
   .navbar-links {
     gap: 1rem;
+  }
+
+  .brand-text {
+    display: none;
   }
 }
