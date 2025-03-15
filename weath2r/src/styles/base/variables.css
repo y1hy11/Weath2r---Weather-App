@@ -1,6 +1,12 @@
 :root {
-    --bg-light:;
-    --bg-dark:;
-    --text-light:;
-    --text-dark:;
+    --bg-light: #f5f5f5;
+    --bg-dark: #1a1a1a;
+    --text-light: #333333;
+    --text-dark: #ffffff;
+    --primary-color: #0088cc;
+    --secondary-color: #00aaff;
+    --accent-color: #ff6b6b;
+    --border-radius: 8px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
 }
