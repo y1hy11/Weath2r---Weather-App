@@ -1,0 +1,40 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--bg-light);
+  box-shadow: var(--box-shadow);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  transition: var(--transition);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    gap: 1rem;
+  }
+}
