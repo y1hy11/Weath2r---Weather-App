@@ -1,0 +1,45 @@
+.weather-map {
+  height: 400px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  margin: 2rem 0;
+  position: relative;
+  transition: transform 0.3s var(--animation-timing),
+              box-shadow 0.3s var(--animation-timing);
+}
+
+.weather-map::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0,0,0,0.05), transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.weather-map:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.weather-map .leaflet-marker-icon {
+  transition: transform 0.3s var(--animation-timing);
+}
+
+.weather-map:hover .leaflet-marker-icon {
+  transform: scale(1.2) translateY(-5px);
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.dark-mode .leaflet-tile {
+  filter: invert(1) hue-rotate(180deg);
+}

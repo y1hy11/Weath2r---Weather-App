@@ -22,6 +22,22 @@
   text-decoration: none;
   color: var(--text-light);
   transition: var(--transition);
+  position: relative;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
 }
 
 .theme-toggle {
@@ -31,6 +47,11 @@
   cursor: pointer;
   padding: 0.5rem;
   border-radius: var(--border-radius);
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(45deg);
 }
 
 @media (max-width: 768px) {

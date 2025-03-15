@@ -1,0 +1,27 @@
+.privacy-policy {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.policy-content {
+  margin-top: 2rem;
+}
+
+.policy-content section {
+  margin-bottom: 2rem;
+}
+
+.policy-content h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.policy-content p {
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+.dark-mode .policy-content p {
+  color: var(--text-dark);
+}
