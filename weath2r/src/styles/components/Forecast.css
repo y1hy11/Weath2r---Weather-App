@@ -1,0 +1,24 @@
+.forecast {
+  margin: 2rem 0;
+}
+
+.forecast h2 {
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.dark-mode .forecast h2 {
+  color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+  .forecast-grid {
+    grid-template-columns: 1fr;
+  }
+}
