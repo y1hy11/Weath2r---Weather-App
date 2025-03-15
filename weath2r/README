@@ -18,8 +18,6 @@ A modern weather application built with React that provides detailed weather inf
 ```
 Advanced-Weather_App_react/
 ├── public/
-│   ├── index.html
-│   └── assets/
 ├── src/
 |   ├── pages/
 |   │   ├── Home.jsx

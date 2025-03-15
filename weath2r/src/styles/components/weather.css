@@ -1,0 +1,35 @@
+.weather-card {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: var(--box-shadow);
+}
+
+.current-weather {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 2rem;
+}
+
+.forecast-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin: 2rem 0;
+}
+
+.weather-map {
+  height: 400px;
+  margin: 2rem 0;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .forecast-container {
+    grid-template-columns: 1fr;
+  }
+}

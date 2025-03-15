@@ -1,0 +1,7 @@
+body {
+ background-color: var(--background-color);
+}
+
+.dark-mode body {
+  background-color: var(--background-color);
+}
