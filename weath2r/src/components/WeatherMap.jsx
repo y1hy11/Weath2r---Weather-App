@@ -1,42 +1,62 @@
 import { useState } from 'react';
-import { useApp } from '../context/AppContext';
+import { motion } from 'framer-motion';
 
 export default function WeatherMap({ lat, lon }) {
   const [activeMap, setActiveMap] = useState('heat');
-  const { theme } = useApp();
 
-  const heatMapUrl = `https://tile.openweathermap.org/map/temp_new/7/${lat}/${lon}.png?appid=${import.meta.env.VITE_OPENWEATHER_API_KEY}`;
-  const windMapUrl = `https://tile.openweathermap.org/map/wind_new/7/${lat}/${lon}.png?appid=${import.meta.env.VITE_OPENWEATHER_API_KEY}`;
+  // OpenWeatherMap layer configuration with 1km zoom (zoom level 12)
+  const mapConfig = {
+    heat: {
+      url: `https://tile.openweathermap.org/map/temp_new/12/${lat}/${lon}.png?appid=${import.meta.env.VITE_OPENWEATHER_API_KEY}`,
+      title: 'Temperature Map',
+      icon: '🌡️'
+    },
+    wind: {
+      url: `https://tile.openweathermap.org/map/wind_new/12/${lat}/${lon}.png?appid=${import.meta.env.VITE_OPENWEATHER_API_KEY}`,
+      title: 'Wind Map',
+      icon: '💨'
+    }
+  };
 
   return (
     <div className="map-section">
       <div className="map-header">
         <h2>Weather Maps</h2>
         <p className="map-description">
-          View temperature and wind patterns in your area
+          View temperature and wind patterns
         </p>
       </div>
       <div className="map-container">
         <div className="map-tabs">
-          <button 
-            className={`map-tab ${activeMap === 'heat' ? 'active' : ''}`}
-            onClick={() => setActiveMap('heat')}
-          >
-            🌡️ Heat Map
-          </button>
-          <button 
-            className={`map-tab ${activeMap === 'wind' ? 'active' : ''}`}
-            onClick={() => setActiveMap('wind')}
-          >
-            💨 Wind Map
-          </button>
+          {Object.entries(mapConfig).map(([key, { title, icon }]) => (
+            <button 
+              key={key}
+              className={`map-tab ${activeMap === key ? 'active' : ''}`}
+              onClick={() => setActiveMap(key)}
+            >
+              {icon} {title}
+            </button>
+          ))}
         </div>
-        <div className="static-map">
-          <img 
-            src={activeMap === 'heat' ? heatMapUrl : windMapUrl}
-            alt={`${activeMap === 'heat' ? 'Temperature' : 'Wind'} map`}
-            className="map-image"
+        <motion.div 
+          className="map-image-container"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
+        >
+          <iframe
+            src={`https://openweathermap.org/weathermap?basemap=map&cities=false&layer=${activeMap}_new&lat=${lat}&lon=${lon}&zoom=12`}
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            title={mapConfig[activeMap].title}
+            className="weather-map-iframe"
+            allowFullScreen
           />
+        </motion.div>
+        <div className="map-legend">
+          <span>{mapConfig[activeMap].icon}</span>
+          <span>{activeMap === 'heat' ? 'Temperature Scale' : 'Wind Speed Scale'}</span>
         </div>
       </div>
     </div>
