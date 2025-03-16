@@ -1,7 +1,7 @@
 .search-container {
   position: relative;
   max-width: 600px;
-  margin: 2rem auto;
+  margin: 8rem auto;
 }
 
 .search-input {
@@ -35,7 +35,7 @@
   width: 100%;
   background: var(--bg-light);
   border: 1px solid var(--primary-color);
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  border-radius: var(--border-radius);
   max-height: 300px;
   overflow-y: auto;
   z-index: 1000;
@@ -71,8 +71,7 @@
 .search-suggestions li:hover {
   background: var(--primary-color);
   color: white;
-  transform: translateX(5px);
-  transform: translateX(8px) scale(1.02);
+
   background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
 }
 

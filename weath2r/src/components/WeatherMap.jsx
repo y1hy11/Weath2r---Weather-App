@@ -1,52 +1,44 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { useApp } from '../context/AppContext';
-import 'leaflet/dist/leaflet.css';
 
-export default function WeatherMap({ lat, lon, zoom = 10 }) {
-  const mapContainerRef = useRef(null);
-  const mapInstanceRef = useRef(null);
+export default function WeatherMap({ lat, lon }) {
+  const [activeMap, setActiveMap] = useState('heat');
   const { theme } = useApp();
-  const [error, setError] = useState(false);
 
-  useEffect(() => {
-    async function initMap() {
-      try {
-        const L = (await import('leaflet')).default;
-        
-        if (!mapInstanceRef.current && mapContainerRef.current) {
-          const map = L.map(mapContainerRef.current).setView([lat, lon], zoom);
-          
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap contributors'
-          }).addTo(map);
+  const heatMapUrl = `https://tile.openweathermap.org/map/temp_new/7/${lat}/${lon}.png?appid=${import.meta.env.VITE_OPENWEATHER_API_KEY}`;
+  const windMapUrl = `https://tile.openweathermap.org/map/wind_new/7/${lat}/${lon}.png?appid=${import.meta.env.VITE_OPENWEATHER_API_KEY}`;
 
-          const marker = L.marker([lat, lon]).addTo(map);
-          mapInstanceRef.current = { map, marker };
-
-          // Force a resize after initialization
-          setTimeout(() => {
-            map.invalidateSize();
-          }, 100);
-        }
-      } catch (err) {
-        console.error('Map initialization error:', err);
-        setError(true);
-      }
-    }
-
-    initMap();
-
-    return () => {
-      if (mapInstanceRef.current) {
-        mapInstanceRef.current.map.remove();
-        mapInstanceRef.current = null;
-      }
-    };
-  }, [lat, lon, zoom]);
-
-  if (error) {
-    return <div className="map-error">Failed to load map</div>;
-  }
-
-  return <div ref={mapContainerRef} className="weather-map" />;
+  return (
+    <div className="map-section">
+      <div className="map-header">
+        <h2>Weather Maps</h2>
+        <p className="map-description">
+          View temperature and wind patterns in your area
+        </p>
+      </div>
+      <div className="map-container">
+        <div className="map-tabs">
+          <button 
+            className={`map-tab ${activeMap === 'heat' ? 'active' : ''}`}
+            onClick={() => setActiveMap('heat')}
+          >
+            🌡️ Heat Map
+          </button>
+          <button 
+            className={`map-tab ${activeMap === 'wind' ? 'active' : ''}`}
+            onClick={() => setActiveMap('wind')}
+          >
+            💨 Wind Map
+          </button>
+        </div>
+        <div className="static-map">
+          <img 
+            src={activeMap === 'heat' ? heatMapUrl : windMapUrl}
+            alt={`${activeMap === 'heat' ? 'Temperature' : 'Wind'} map`}
+            className="map-image"
+          />
+        </div>
+      </div>
+    </div>
+  );
 }

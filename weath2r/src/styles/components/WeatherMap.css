@@ -118,3 +118,119 @@
     height: 500px;
   }
 }
+
+.map-section {
+  padding: 2rem 0;
+}
+
+.map-section h1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.map-section p {
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.map-container {
+  position: relative;
+}
+
+.map-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.map-tab {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  background: var(--bg-light);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.map-tab.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.dark-mode .map-section p {
+  color: var(--text-dark);
+}
+
+.dark-mode .map-tab {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.dark-mode .map-tab.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.map-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+}
+
+.map-header h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.map-description {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--text-light);
+  opacity: 0.9;
+}
+
+.map-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  border: 2px solid var(--primary-color);
+}
+
+.dark-mode .map-description {
+  color: var(--text-dark);
+}
+
+.static-map {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background: var(--bg-light);
+  box-shadow: var(--box-shadow);
+}
+
+.map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.map-image:hover {
+  opacity: 0.9;
+}
