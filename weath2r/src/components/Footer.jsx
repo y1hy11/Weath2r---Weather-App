@@ -17,7 +17,6 @@ export default function Footer() {
         <div className="footer-section links">
           <h4>Quick Links</h4>
           <nav>
-            <Link to="/">Home</Link>
             <Link to="/about">About</Link>
             <Link to="/contact">Contact</Link>
             <Link to="/privacy-policy">Privacy Policy</Link>
