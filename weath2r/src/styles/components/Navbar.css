@@ -68,15 +68,16 @@
 .theme-toggle {
   background: none;
   border: none;
-  font-size: 1.6rem;
   cursor: pointer;
   padding: 0.5rem;
   border-radius: var(--border-radius);
   transition: all 0.3s ease;
+  color: var(--text-light);
 }
 
 .theme-toggle:hover {
   transform: rotate(15deg) scale(1.1);
+  color: var(--primary-color);
 }
 
 @keyframes float {
@@ -89,6 +90,10 @@
 }
 
 .dark-mode .navbar-links a {
+  color: var(--text-dark);
+}
+
+.dark-mode .theme-toggle {
   color: var(--text-dark);
 }
 
