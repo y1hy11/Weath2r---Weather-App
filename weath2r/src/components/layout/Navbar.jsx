@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 
 const MoonIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 A7 7 0 0 0 21 12.79z"/>
   </svg>
 );
 
@@ -23,11 +23,20 @@ const SunIcon = () => (
   </svg>
 );
 
+const MenuIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="3" y1="12" x2="21" y2="12"></line>
+    <line x1="3" y1="6" x2="21" y2="6"></line>
+    <line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+);
+
 export default function Navbar() {
   const { theme, setTheme } = useApp();
   const location = useLocation();
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
@@ -38,11 +47,27 @@ export default function Navbar() {
       const currentScrollY = window.scrollY;
       setIsVisible(currentScrollY < lastScrollY || currentScrollY < 50);
       setLastScrollY(currentScrollY);
+      // Close mobile menu when scrolling
+      setIsMobileMenuOpen(false);
+    };
+
+    const handleTouchStart = () => {
+      // Close mobile menu when touching the screen
+      setIsMobileMenuOpen(false);
     };
 
     window.addEventListener('scroll', controlNavbar);
-    return () => window.removeEventListener('scroll', controlNavbar);
+    window.addEventListener('touchstart', handleTouchStart);
+    
+    return () => {
+      window.removeEventListener('scroll', controlNavbar);
+      window.removeEventListener('touchstart', handleTouchStart);
+    };
   }, [lastScrollY]);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
     <motion.nav 
@@ -56,23 +81,30 @@ export default function Navbar() {
           <img src="/assets/Logo1.svg" alt="Weath2r Logo" className="logo" />
         </Link>
       </div>
-      <div className="navbar-links">
-        {['/', '/about', '/contact'].map((path) => (
-          <Link 
-            key={path} 
-            to={path}
-            className={location.pathname === path ? 'active' : ''}
-          >
-            {path === '/' ? 'Home' : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
-          </Link>
-        ))}
-      </div>
-        <div className="navbar-controls">
-        <button onClick={toggleTheme} className="theme-toggle">
-          {theme === 'light' ? <MoonIcon /> : <SunIcon />}
-        </button>
-        </div>
 
+      <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
+        <MenuIcon />
+      </button>
+
+      <div className={`navbar-mobile-container ${isMobileMenuOpen ? 'open' : ''}`}>
+        <div className="navbar-links">
+          {['/', '/about', '/contact'].map((path) => (
+            <Link 
+              key={path} 
+              to={path}
+              className={location.pathname === path ? 'active' : ''}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {path === '/' ? 'Home' : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
+            </Link>
+          ))}
+        </div>
+        <div className="navbar-controls">
+          <button onClick={toggleTheme} className="theme-toggle">
+            {theme === 'light' ? <MoonIcon /> : <SunIcon />}
+          </button>
+        </div>
+      </div>
     </motion.nav>
   );
 }
