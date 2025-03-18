@@ -1,0 +1,58 @@
+.error-boundary {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(to bottom right, var(--bg-light), rgba(var(--primary-color-rgb), 0.05));
+}
+
+.error-content {
+  background: var(--bg-light);
+  padding: 3rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  max-width: 600px;
+}
+
+.error-content h1 {
+  color: var(--primary-color);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+.error-content p {
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.refresh-button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.refresh-button:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(var(--primary-color-rgb), 0.2);
+}
+
+.dark-mode .error-boundary {
+  background: linear-gradient(to bottom right, var(--bg-dark), rgba(255, 255, 255, 0.05));
+}
+
+.dark-mode .error-content {
+  background: var(--bg-dark);
+}
+
+.dark-mode .error-content p {
+  color: var(--text-dark);
+}

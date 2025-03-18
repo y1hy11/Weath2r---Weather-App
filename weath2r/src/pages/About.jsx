@@ -39,21 +39,6 @@ export default function About() {
             <li>Location-based information</li>
           </ul>
         </motion.section>
-
-        <motion.section 
-          className="about-section tech"
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.6 }}
-        >
-          <h2>Technology Stack</h2>
-          <div className="tech-stack">
-            <span>React</span>
-            <span>OpenWeather API</span>
-            <span>Framer Motion</span>
-            <span>Modern CSS</span>
-          </div>
-        </motion.section>
       </div>
     </motion.div>
   );
