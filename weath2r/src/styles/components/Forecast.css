@@ -1,0 +1,100 @@
+.forecast {
+  margin: 2rem 0;
+}
+
+.forecast h2 {
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.dark-mode .forecast h2 {
+  color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+  .forecast-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.forecast-card {
+  background: var(--bg-light);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  transition: all 0.3s var(--animation-timing);
+  cursor: pointer;
+}
+
+.forecast-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.forecast-card:hover .forecast-icon img {
+  transform: scale(1.2);
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+.forecast-date {
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.forecast-icon {
+  margin: 1rem 0;
+}
+
+.forecast-icon img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s var(--animation-timing),
+              filter 0.3s var(--animation-timing);
+}
+
+.forecast-temp {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.forecast-card:hover .forecast-temp {
+  color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+.forecast-temp .high {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.forecast-temp .low {
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+.forecast-condition {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  opacity: 0.8;
+}
+
+.dark-mode .forecast-card {
+  background: var(--bg-dark);
+}
+
+.dark-mode .forecast-condition {
+  color: var(--text-dark);
+}
