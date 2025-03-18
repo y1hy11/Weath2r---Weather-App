@@ -25,3 +25,29 @@
 .dark-mode .policy-content p {
   color: var(--text-dark);
 }
+
+@media (max-width: 768px) {
+  .privacy-policy {
+    padding: 1.5rem;
+  }
+
+  .privacy-policy h1 {
+    font-size: 1.8rem;
+  }
+
+  .policy-content {
+    margin-top: 1.5rem;
+  }
+
+  .policy-content section {
+    margin-bottom: 1.5rem;
+  }
+
+  .policy-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .policy-content p {
+    font-size: 0.95rem;
+  }
+}

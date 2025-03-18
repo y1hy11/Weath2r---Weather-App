@@ -34,3 +34,25 @@
 .home-link:hover {
   background: var(--secondary-color);
 }
+
+@media (max-width: 768px) {
+  .not-found {
+    padding: 2rem 1rem;
+  }
+
+  .not-found h1 {
+    font-size: 4rem;
+  }
+
+  .not-found h2 {
+    font-size: 1.5rem;
+  }
+
+  .not-found p {
+    font-size: 0.95rem;
+  }
+
+  .home-link {
+    padding: 0.7rem 1.2rem;
+  }
+}

@@ -145,3 +145,22 @@
     font-size: 1rem;
   }
 }
+
+@media (max-width: 768px) {
+  .search-container {
+    margin: 8rem 1rem 25rem 1rem;
+    padding: 0 1rem;
+  }
+
+  .search-input {
+    padding: 0.8rem;
+  }
+
+  .search-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .search-suggestions {
+    max-height: 250px;
+  }
+}

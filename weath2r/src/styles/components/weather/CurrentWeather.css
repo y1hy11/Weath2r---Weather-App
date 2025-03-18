@@ -123,6 +123,26 @@
   .weather-details-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .current-weather {
+    padding: 1.5rem;
+  }
+
+  .current-weather-main h2 {
+    font-size: 2rem;
+  }
+
+  .weather-details-grid {
+    gap: 1rem;
+  }
+
+  .detail-item {
+    padding: 1rem;
+  }
+
+  .datetime .time {
+    font-size: 1.5rem;
+  }
 }
 
 @keyframes fadeInUp {

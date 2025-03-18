@@ -119,6 +119,28 @@
   }
 }
 
+@media (max-width: 768px) {
+  .weather-card {
+    padding: 1.5rem;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .weather-icon {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .weather-info h3 {
+    font-size: 2rem;
+  }
+
+  .weather-details {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
 @media (hover: none) {
   .weather-card:active {
     transform: scale(0.98);

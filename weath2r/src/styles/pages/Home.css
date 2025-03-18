@@ -30,3 +30,25 @@
   border-radius: 50%;
   margin-bottom: 1rem;
 }
+
+@media (max-width: 768px) {
+  .home {
+    padding: 1rem;
+  }
+
+  .error-message {
+    margin: 1rem auto;
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .loading-container {
+    min-height: 200px;
+  }
+
+  .loading-spinner {
+    width: 30px;
+    height: 30px;
+    border-width: 3px;
+  }
+}
