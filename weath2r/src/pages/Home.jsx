@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useApp } from '../context/AppContext';
 import { getCurrentWeather, getForecast } from '../services/api/weatherApi';
-import SearchBar from '../components/SearchBar';
-import CurrentWeather from '../components/CurrentWeather';
-import Forecast from '../components/Forecast';
-import WeatherMap from '../components/WeatherMap';
-import WeatherStats from '../components/WeatherStats';
+import CurrentWeather from '../components/weather/CurrentWeather';
+import SearchBar from '../components/weather/SearchBar';
+import Forecast from '../components/weather/Forecast';
+import WeatherMap from '../components/weather/WeatherMap';
+import WeatherStats from '../components/weather/WeatherStats';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 export default function Home() {

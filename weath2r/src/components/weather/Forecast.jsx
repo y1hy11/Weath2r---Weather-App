@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useApp } from '../context/AppContext';
+import { useApp } from '../../context/AppContext';
 
 export default function Forecast({ data }) {
   const { units } = useApp();
