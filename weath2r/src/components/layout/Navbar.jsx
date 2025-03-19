@@ -45,22 +45,17 @@ export default function Navbar() {
   useEffect(() => {
     const controlNavbar = () => {
       const currentScrollY = window.scrollY;
-      setIsVisible(currentScrollY < lastScrollY || currentScrollY < 50);
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setIsVisible(false);
+        setIsMobileMenuOpen(false); // Close menu when scrolling down
+      } else {
+        setIsVisible(true);
+      }
       setLastScrollY(currentScrollY);
-      setIsMobileMenuOpen(false);
-    };
-
-    const handleTouchStart = () => {
-      setIsMobileMenuOpen(false);
     };
 
     window.addEventListener('scroll', controlNavbar);
-    window.addEventListener('touchstart', handleTouchStart);
-
-    return () => {
-      window.removeEventListener('scroll', controlNavbar);
-      window.removeEventListener('touchstart', handleTouchStart);
-    };
+    return () => window.removeEventListener('scroll', controlNavbar);
   }, [lastScrollY]);
 
   const toggleMobileMenu = () => {

@@ -137,6 +137,11 @@
     text-align: center;
   }
 
+  .footer-section.links nav {
+    align-items: center;
+    justify-content: center;
+  }
+
   .footer-logo {
     height: 40px;
   }
