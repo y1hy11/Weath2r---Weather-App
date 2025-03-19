@@ -27,7 +27,7 @@ export default function Contact() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    setErrors(prev => ({ ...prev, [name]: '' })); // Clear error when typing
+    setErrors(prev => ({ ...prev, [name]: '' }));
   };
 
   const handleBlur = (e) => {
@@ -39,7 +39,6 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // Validate all fields
     const newErrors = {};
     Object.keys(formData).forEach(key => {
       const error = validateField(key, formData[key]);
@@ -84,9 +83,10 @@ export default function Contact() {
       className="contact-page"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
     >
       <h1>Get in Touch</h1>
-      <p className="contact-intro">Have questions or feedback? We'd love to hear from you.</p>
+      <p className="contact-intro">Have questions or suggestions? We'd love to hear from you.</p>
       
       {submitStatus === 'success' && (
         <div className="submit-message success">
@@ -147,7 +147,7 @@ export default function Contact() {
           className={`submit-button ${isSubmitting ? 'submitting' : ''}`}
           disabled={isSubmitting}
         >
-          {isSubmitting ? 'Sending...' : 'Send Message'}
+          <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
         </button>
       </form>
     </motion.div>

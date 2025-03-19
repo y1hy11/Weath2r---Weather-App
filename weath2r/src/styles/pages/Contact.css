@@ -21,11 +21,22 @@
   line-height: 1.6;
 }
 
+.dark-mode .contact-intro {
+  color: var(--text-dark);
+}
+
 .contact-form {
-  background: rgba(var(--primary-color-rgb), 0.03);
+  background: var(--bg-light);
   padding: 2rem;
   border-radius: var(--border-radius);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--box-shadow);
+  border: 1px solid rgba(var(--primary-color-rgb), 0.1);
+}
+
+.dark-mode .contact-form {
+  background: var(--bg-dark);
+  border-color: rgba(var(--primary-color-rgb), 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .form-group {
@@ -39,15 +50,26 @@
   font-weight: 500;
 }
 
+.dark-mode .form-group label {
+  color: var(--text-dark);
+}
+
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 1rem;
-  border: 2px solid transparent;
+  border: 2px solid rgba(var(--primary-color-rgb), 0.2);
   border-radius: var(--border-radius);
   background: var(--bg-light);
   color: var(--text-light);
   transition: all 0.3s ease;
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group textarea {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+  border-color: rgba(var(--primary-color-rgb), 0.3);
 }
 
 .form-group input:focus,
@@ -100,7 +122,7 @@
 .submit-button {
   width: 100%;
   padding: 1rem;
-  background: var(--primary-color);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
   border: none;
   border-radius: var(--border-radius);
@@ -116,6 +138,11 @@
   background: var(--secondary-color);
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(var(--primary-color-rgb), 0.2);
+}
+
+.dark-mode .submit-button:hover {
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  box-shadow: 0 4px 15px rgba(var(--primary-color-rgb), 0.3);
 }
 
 .submit-button.submitting {
@@ -137,25 +164,25 @@
   border: 1px solid rgba(46, 213, 115, 0.2);
 }
 
+.dark-mode .submit-message.success {
+  background: rgba(46, 213, 115, 0.15);
+  color: #40e587;
+}
+
 .submit-message.error {
   background: rgba(255, 71, 87, 0.1);
   color: #ff4757;
   border: 1px solid rgba(255, 71, 87, 0.2);
 }
 
+.dark-mode .submit-message.error {
+  background: rgba(255, 71, 87, 0.15);
+  color: #ff6b6b;
+}
+
 @keyframes slideDown {
   from { transform: translateY(-10px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
-}
-
-.dark-mode .contact-form {
-  background: rgba(255, 255, 255, 0.03);
-}
-
-.dark-mode .form-group input,
-.dark-mode .form-group textarea {
-  background: var(--bg-dark);
-  color: var(--text-dark);
 }
 
 @media (max-width: 768px) {
