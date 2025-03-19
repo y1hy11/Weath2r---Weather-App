@@ -13,6 +13,13 @@
   transition: all 0.3s ease;
   background: var(--bg-light);
   color: var(--text-light);
+  border-color: rgba(var(--primary-color-rgb), 0.3);
+}
+
+.dark-mode .search-input {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+  border-color: rgba(var(--primary-color-rgb), 0.5);
 }
 
 .search-input:focus {
@@ -41,6 +48,14 @@
   z-index: 1000;
   animation: slideDown 0.3s ease;
   transform-origin: top;
+  background: var(--bg-light);
+  border-color: rgba(var(--primary-color-rgb), 0.2);
+}
+
+.dark-mode .search-suggestions {
+  background: var(--bg-dark);
+  border-color: rgba(var(--primary-color-rgb), 0.4);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes slideDown {
@@ -62,6 +77,11 @@
   position: relative;
   padding-left: 2rem;
   transform-origin: left;
+}
+
+.dark-mode .search-suggestions li {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-dark);
 }
 
 .search-suggestions li:last-child {

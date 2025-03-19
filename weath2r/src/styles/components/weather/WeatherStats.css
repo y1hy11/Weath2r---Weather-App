@@ -19,14 +19,26 @@
 
 .stat-item {
   padding: 1.2rem;
-  background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.1), rgba(var(--secondary-color-rgb), 0.1));
+  background: linear-gradient(135deg, 
+    rgba(var(--primary-color-rgb), 0.1),
+    rgba(var(--secondary-color-rgb), 0.05)
+  );
   border-radius: var(--border-radius);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(var(--primary-color-rgb), 0.1);
 }
 
 .dark-mode .stat-item {
-  background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.05), rgba(var(--secondary-color-rgb), 0.05));
+  background: linear-gradient(135deg,
+    rgba(var(--primary-color-rgb), 0.15),
+    rgba(var(--secondary-color-rgb), 0.05)
+  );
+  border-radius: var(--border-radius);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(var(--primary-color-rgb), 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .stat-item:hover {
@@ -52,6 +64,10 @@
   color: var(--primary-color);
   transform: scale(1);
   transition: transform 0.3s ease;
+}
+
+.dark-mode .stat-value {
+  color: var(--secondary-color);
 }
 
 .stat-item:hover .stat-value {

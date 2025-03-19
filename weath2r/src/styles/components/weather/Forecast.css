@@ -31,6 +31,7 @@
   text-align: center;
   transition: all 0.3s var(--animation-timing);
   cursor: pointer;
+  border: 1px solid rgba(var(--primary-color-rgb), 0.1);
 }
 
 .forecast-card:hover {
@@ -39,8 +40,8 @@
 }
 
 .forecast-card:hover .forecast-icon img {
-  transform: scale(1.2);
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+  transform: scale(1.2) translateY(-5px);
+  filter: drop-shadow(0 4px 8px rgba(var(--primary-color-rgb), 0.3));
 }
 
 .forecast-date {
@@ -51,13 +52,28 @@
 
 .forecast-icon {
   margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 64px;
 }
 
 .forecast-icon img {
-  width: 50px;
-  height: 50px;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
   transition: transform 0.3s var(--animation-timing),
               filter 0.3s var(--animation-timing);
+  /* Fix for light mode visibility */
+  mix-blend-mode: normal;
+  background: transparent;
+}
+
+.dark-mode .forecast-icon img {
+  filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.1));
 }
 
 .forecast-temp {
@@ -92,8 +108,13 @@
 }
 
 .dark-mode .forecast-card {
-  background: var(--bg-dark);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(
+    135deg,
+    rgba(var(--bg-dark-rgb), 0.95),
+    rgba(var(--primary-color-rgb), 0.1)
+  );
+  border: 1px solid rgba(var(--primary-color-rgb), 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .dark-mode .forecast-condition {
@@ -105,5 +126,14 @@
 }
 
 .dark-mode .forecast-card:hover {
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 30px rgba(var(--primary-color-rgb), 0.15);
+  border-color: rgba(var(--primary-color-rgb), 0.3);
+}
+
+.dark-mode .forecast-temp .high {
+  color: var(--secondary-color);
+}
+
+.dark-mode .forecast-temp .low {
+  color: rgba(255, 255, 255, 0.7);
 }
