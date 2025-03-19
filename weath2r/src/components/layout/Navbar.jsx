@@ -47,7 +47,7 @@ export default function Navbar() {
       const currentScrollY = window.scrollY;
       if (currentScrollY > lastScrollY && currentScrollY > 50) {
         setIsVisible(false);
-        setIsMobileMenuOpen(false); // Close menu when scrolling down
+        setIsMobileMenuOpen(false);
       } else {
         setIsVisible(true);
       }

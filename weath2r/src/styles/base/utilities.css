@@ -1,8 +1,18 @@
 body {
   background-color: var(--bg-light);
+  color: var(--text-light);
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
-.dark-mode body {
+body.dark-mode {
   background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* Theme transitions */
+* {
+  transition: background-color 0.3s ease-in-out,
+              color 0.3s ease-in-out,
+              border-color 0.3s ease-in-out,
+              box-shadow 0.3s ease-in-out;
 }

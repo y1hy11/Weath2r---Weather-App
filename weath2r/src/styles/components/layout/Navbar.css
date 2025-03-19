@@ -10,6 +10,7 @@
   z-index: 1000;
   backdrop-filter: blur(10px);
   background-color: rgba(var(--bg-light), 0.8);
+  color: var(--text-light);
 }
 
 .navbar-brand {
@@ -22,8 +23,12 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--text-light);
   font-weight: bold;
+}
+
+.dark-mode .navbar-brand a {
+  color: var(--text-dark);
 }
 
 .logo {
@@ -96,6 +101,7 @@
 
 .dark-mode .navbar {
   background-color: rgba(var(--bg-dark), 0.8);
+  color: var(--text-dark);
 }
 
 .dark-mode .navbar-links a {

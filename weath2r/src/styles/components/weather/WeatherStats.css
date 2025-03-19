@@ -6,6 +6,10 @@
   margin: 2rem 0;
 }
 
+.dark-mode .weather-stats {
+  background: var(--bg-dark);
+}
+
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -21,6 +25,10 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.dark-mode .stat-item {
+  background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.05), rgba(var(--secondary-color-rgb), 0.05));
+}
+
 .stat-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(var(--primary-color-rgb), 0.15);
@@ -32,6 +40,10 @@
   opacity: 0.8;
   margin-bottom: 0.5rem;
   display: block;
+}
+
+.dark-mode .stat-label {
+  color: var(--text-dark);
 }
 
 .stat-value {

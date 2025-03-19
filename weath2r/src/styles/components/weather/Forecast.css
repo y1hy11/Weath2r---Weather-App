@@ -93,8 +93,17 @@
 
 .dark-mode .forecast-card {
   background: var(--bg-dark);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .dark-mode .forecast-condition {
   color: var(--text-dark);
+}
+
+.dark-mode .forecast-date {
+  color: var(--secondary-color);
+}
+
+.dark-mode .forecast-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
