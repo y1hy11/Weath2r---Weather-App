@@ -13,9 +13,7 @@
   font-size: clamp(2rem, 5vw, 3.5rem);
   color: var(--primary-color);
   margin-bottom: 1rem;
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: (--primary-color);
 }
 
 .about-grid {
@@ -26,7 +24,7 @@
 
 .about-section {
   padding: 2rem;
-  background: rgba(var(--primary-color-rgb), 0.03);
+  background-color: rgba(var(--primary-color-rgb), 0.03);
   border-radius: var(--border-radius);
   transition: transform 0.3s ease;
 }
@@ -64,19 +62,6 @@
   color: var(--primary-color);
 }
 
-.tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.tech-stack span {
-  padding: 0.5rem 1rem;
-  background: var(--primary-color);
-  color: white;
-  border-radius: var(--border-radius);
-  font-size: 0.9rem;
-}
 
 .dark-mode .about-section {
   background: rgba(255, 255, 255, 0.03);
