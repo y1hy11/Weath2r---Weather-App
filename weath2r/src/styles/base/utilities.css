@@ -9,10 +9,25 @@ body.dark-mode {
   color: var(--text-dark);
 }
 
-/* Theme transitions */
 * {
   transition: background-color 0.3s ease-in-out,
               color 0.3s ease-in-out,
               border-color 0.3s ease-in-out,
               box-shadow 0.3s ease-in-out;
+}
+
+.background-pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url('../../../public/assets/HeadImg.svg');
+  background-size: 200px 100px;
+  background-position: 100% 100%;
+  background-repeat: repeat;
+  opacity: 0.1;
+  animation: scrollPattern 50s linear infinite;
+  transform: rotate(5deg)
 }

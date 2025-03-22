@@ -7,7 +7,7 @@ export default function CurrentWeather({ data }) {
   const toggleUnits = () => {
     setUnits(units === 'celsius' ? 'fahrenheit' : 'celsius');
   };
-
+ 
   const localTime = new Date(data.location.localtime);
   const formattedTime = localTime.toLocaleTimeString('en-US', {
     hour: '2-digit',
