@@ -171,9 +171,6 @@
     opacity: 0;
     pointer-events: none;
     z-index: -999;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(15px);
-    justify-content: flex-start;
   }
 
   .navbar-mobile-container.open {

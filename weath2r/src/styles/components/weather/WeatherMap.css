@@ -105,17 +105,7 @@
   position: relative;
 }
 
-@media (max-width: 768px) {
-  .weather-map {
-    display: none;
-  }
-}
 
-@media (min-width: 768px) {
-  .weather-map {
-    display: none;
-  }
-}
 
 .map-section {
   padding: 2rem 0;
@@ -261,11 +251,7 @@
   min-height: 400px;
 }
 
-@media (max-width: 768px) {
-  .map-image-container {
-    height: 300px;
-  }
-}
+
 
 .map-legend {
   display: flex;
@@ -340,4 +326,10 @@
 .dark-mode .map-menu-toggle {
   background: var(--bg-dark);
   color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+  .map-section {
+    display: none;
+  }
 }

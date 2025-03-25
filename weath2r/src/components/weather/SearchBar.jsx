@@ -43,7 +43,7 @@ export default function SearchBar() {
               key={suggestion.id}
               onClick={() => selectLocation(suggestion)}
             >
-              {suggestion.name}, {suggestion.country}
+              <p className='LocName'>{suggestion.name}, {suggestion.country}</p>
             </li>
           ))}
         </ul>

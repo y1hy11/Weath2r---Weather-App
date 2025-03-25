@@ -79,6 +79,10 @@
   transform-origin: left;
 }
 
+.LocName {
+  margin-left: 1.5rem;
+}
+
 .dark-mode .search-suggestions li {
   border-bottom-color: rgba(255, 255, 255, 0.1);
   color: var(--text-dark);
@@ -119,21 +123,6 @@
   }
 }
 
-@media (max-width: 480px) {
-  .search-container {
-    margin: 1rem;
-  }
-  
-  .search-input {
-    font-size: 1rem;
-    padding: 1rem;
-  }
-  
-  .search-suggestions li {
-    padding: 1rem;
-  }
-}
-
 .search-container h1 {
   font-size: 2.5rem;
   text-align: center;
@@ -162,23 +151,38 @@
   .search-container h2 {
     font-size: 1rem;
   }
-}
-
-@media (max-width: 768px) {
-  .search-container {
-    margin: 8rem 1rem 25rem 1rem;
-    padding: 0 1rem;
-  }
 
   .search-input {
     padding: 0.8rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .search-suggestions {
+    max-height: 250px;
+    width: calc(100% - 2rem);
+    left: 1rem;
+    right: 1rem;
   }
 
   .search-container h1 {
     font-size: 1.8rem;
   }
 
-  .search-suggestions {
-    max-height: 250px;
+  .search-container {
+    margin: 1rem auto;
+    padding:  12rem 1rem 20rem 1rem;
+  }
+  
+  .search-input {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  
+  .search-suggestions li {
+    padding: 1rem;
+  }
+  .LocName {
+    margin-left: 1.5rem;
   }
 }
