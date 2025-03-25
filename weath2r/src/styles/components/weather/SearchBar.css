@@ -139,9 +139,7 @@
   text-align: center;
   color: var(--primary-color);
   margin-bottom: 1rem;
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--primary-color);
 }
 
 .search-container h2 {

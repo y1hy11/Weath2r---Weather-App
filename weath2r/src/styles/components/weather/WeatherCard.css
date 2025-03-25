@@ -46,9 +46,6 @@
   color: var(--primary-color);
   margin: 0;
   transition: color 0.3s ease;
-  background: none;
-  -webkit-background-clip: unset;
-  -webkit-text-fill-color: unset;
   color: var(--primary-color);
 }
 

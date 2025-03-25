@@ -86,7 +86,6 @@
   border: 2px dashed var(--primary-color);
 }
 
-/* Fix Leaflet controls in dark mode */
 .dark-theme .leaflet-control-zoom a {
   color: #000;
   background: #fff;
@@ -100,7 +99,6 @@
   z-index: 1;
 }
 
-/* Ensure map is visible in containers */
 .home .weather-map {
   min-height: 400px;
   display: block;
@@ -109,13 +107,13 @@
 
 @media (max-width: 768px) {
   .weather-map {
-    height: 300px;
+    display: none;
   }
 }
 
 @media (min-width: 768px) {
   .weather-map {
-    height: 500px;
+    display: none;
   }
 }
 
@@ -192,9 +190,7 @@
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   color: var(--primary-color);
   margin-bottom: 1rem;
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--primary-color);
 }
 
 .map-description {

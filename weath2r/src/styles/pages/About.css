@@ -24,7 +24,7 @@
 
 .about-section {
   padding: 2rem;
-  background-color: rgba(var(--primary-color-rgb), 0.03);
+  background-color: var(--bg-light);
   border-radius: var(--border-radius);
   transition: transform 0.3s ease;
 }
@@ -64,7 +64,7 @@
 
 
 .dark-mode .about-section {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-dark);
 }
 
 .dark-mode .about-section p {
