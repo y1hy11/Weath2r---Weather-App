@@ -1,98 +1,66 @@
-# Advanced Weather App React
+# Weath2r
 
-A modern weather application built with React that provides detailed weather information and forecasts.
+A modern, responsive weather application built with React that provides real-time weather information and forecasts.
 
 ## Features
 
-- Real-time weather data display
-- 5-day weather forecast
-- Interactive Weather Map visualization
-- Search for weather by city name
+- Real-time weather updates
+- 5-day weather forecasts
+- Interactive weather maps (Desktop version)
+- Detailed weather statistics
+- Location-based weather information
+- Dark/Light theme support
 - Responsive design for all devices
-- Temperature units conversion (Celsius/Fahrenheit)
-- Weather conditions visualization
-- Wind speed and humidity information
-
-## Project Structure
-
-```
-Advanced-Weather_App_react/
-├── public/
-├── src/
-|   ├── pages/
-|   │   ├── Home.jsx
-|   │   └── NotFound.jsx
-│   |   └── Contact.jsx
-│   |   └── Privacy&Policy.jsx
-│   |   └── Terms&Conditions.jsx
-│   |   └── About.jsx
-│   ├── context/
-│   │   └── WeatherContext.js
-│   |   └── AppContext.js
-│   ├── components/
-|   |   └──Navbar.jsx
-│   │   ├── Footer.jsx
-│   │   ├── CurrentWeatherjsx
-│   │   ├── Forecast.jsx
-│   │   ├── SearchBar.jsx
-│   │   ├── WeatherMap.jsx
-│   │   └── WeatherCard.jsx
-│   ├── services/
-│   │   └── api/
-│   ├── utils/
-│   ├── styles/
-│   ├── App.js
-│   └── index.js
-└── package.json
-```
+- Interactive UI with smooth animations
 
 ## Technologies Used
 
-- React.js
-- JavaScript/ES6+
-- CSS3/SCSS
-- Weather API
-- Axios for API requests
-- React Icons
-- Leaflet.js for interactive maps
+- React 19
+- React Router DOM
+- Framer Motion
+- Leaflet/React-Leaflet
+- OpenWeather API
+- CSS3 with CSS Variables
+- Vite
 
 ## Getting Started
 
-1. Clone the repository:
+### Prerequisites
+
+- Node.js (version 18 or higher)
+- pnpm package manager
+
+### Installation
+
+1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/Advanced-Weather_App_react.git
+git clone https://github.com/Y1hy11/Advanced-Weather_App_react.git
 ```
 
-2. Install dependencies:
+2. Navigate to the project directory
 ```bash
-npm install
+cd weath2r
 ```
 
-3. Create a `.env` file and add your Weather API key:
-```
-REACT_APP_API_KEY=your_api_key_here
-```
-
-4. Start the development server:
+3. Install dependencies
 ```bash
-npm start
+pnpm install
 ```
 
-## Available Scripts
-
-- `npm start` - Runs the app in development mode
-- `npm test` - Launches the test runner
-- `npm run build` - Builds the app for production
-- `npm run eject` - Ejects from Create React App
+4. Start the development server
+```bash
+pnpm dev
+```
 
 ## Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is open source and available under the MIT License.
+
+## Contact
+
+- GitHub: [@Y1hy11](https://github.com/Y1hy11)
+- LinkedIn: [Yahya El Alaoui](https://www.linkedin.com/in/yahya-elalaoui)
