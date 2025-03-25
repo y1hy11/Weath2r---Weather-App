@@ -34,7 +34,7 @@ export default function About() {
           <ul>
             <li>Real-time weather updates</li>
             <li>5-day weather forecasts</li>
-            <li>Interactive weather maps</li>
+            <li>Interactive weather maps "Pc Version"</li>
             <li>Detailed weather statistics</li>
             <li>Location-based information</li>
           </ul>

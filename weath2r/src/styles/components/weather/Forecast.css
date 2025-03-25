@@ -107,11 +107,7 @@
 }
 
 .dark-mode .forecast-card {
-  background: linear-gradient(
-    135deg,
-    rgba(var(--bg-dark-rgb), 0.95),
-    rgba(var(--primary-color-rgb), 0.1)
-  );
+  background-color: var(--bg-dark);
   border: 1px solid rgba(var(--primary-color-rgb), 0.2);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
