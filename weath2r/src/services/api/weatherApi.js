@@ -31,7 +31,6 @@ export async function searchLocations(query) {
   }));
 }
 
-// Helper functions to format the data
 function formatCurrentWeather(data) {
   return {
     location: {
@@ -65,7 +64,7 @@ function formatForecastData(data) {
   return {
     forecast: {
       forecastday: data.list
-        .filter((item, index) => index % 8 === 0) // Get one forecast per day
+        .filter((item, index) => index % 8 === 0)
         .map(day => ({
           date: new Date(day.dt * 1000).toISOString(),
           day: {

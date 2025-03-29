@@ -182,7 +182,6 @@
   }
 
   .dark-mode .navbar-mobile-container {
-    background: rgba(var(--bg-dark), 0.95);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   }
 
