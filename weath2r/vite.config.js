@@ -27,5 +27,4 @@ export default defineConfig({
       '@styles-pages': path.resolve(__dirname, '/src/styles/pages'),
     },
   },
-
 })
