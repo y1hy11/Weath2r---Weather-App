@@ -63,6 +63,16 @@
   color: var(--text-dark);
 }
 
+.contact-pp-btn {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-pp-btn:hover {
+  color: var(--primary-color);
+}
+
+
 @media (max-width: 768px) {
   .privacy-policy {
     padding: 1.5rem;

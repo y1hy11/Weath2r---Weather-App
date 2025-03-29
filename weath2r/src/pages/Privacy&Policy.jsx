@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 export default function PrivacyPolicy() {
@@ -19,7 +20,6 @@ export default function PrivacyPolicy() {
           <h2>Data Collection</h2>
           <p>We collect and process the following data:</p>
           <ul>
-            <li>Location data (with your permission)</li>
             <li>Search history for weather locations</li>
             <li>Device information for optimal service delivery</li>
           </ul>
@@ -35,7 +35,6 @@ export default function PrivacyPolicy() {
           <h2>Your Privacy Rights</h2>
           <p>You have the following rights:</p>
           <ul>
-            <li>Access your personal data</li>
             <li>Request data deletion</li>
             <li>Opt out of location tracking</li>
             <li>Control browser permissions</li>
@@ -54,7 +53,7 @@ export default function PrivacyPolicy() {
 
         <section>
           <h2>Contact Information</h2>
-          <p>For any privacy-related concerns or questions, please reach out through our contact form</p>
+          <p>For any privacy-related concerns or questions, please reach out through our <a href='/Contact' className='contact-pp-btn'> Contact Form</a> </p>
         </section>
       </div>
     </motion.div>
