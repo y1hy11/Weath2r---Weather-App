@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "paths": {
+            "@/*": ["./src/*"],
+            "@components/*": ["./src/components/*"],
+            "@components-layout/*": ["./src/components/layout/*"],
+            "@components-weather/*": ["./src/components/weather/*"],
+            "@pages/*": ["./src/pages/*"],
+            "@context/*": ["./src/context/*"],
+            "@services/*": ["./src/services/*"],
+            "@services-api/*": ["./src/services/api/*"],
+            "@styles/*": ["./src/styles/*"],
+            "@styles-components/*": ["./src/styles/components/*"],
+            "@styles-layout/*": ["./src/styles/components/layout/*"],
+            "@styles-weather/*": ["./src/styles/components/weather/*"],
+            "@styles-pages/*": ["./src/styles/pages/*"],
+            "@styles-base/*": ["./src/styles/base/*"]
+            
+        },
+    }
+}
