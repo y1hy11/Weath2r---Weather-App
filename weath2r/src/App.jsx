@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { AppProvider } from './context/AppContext.jsx';
-import Navbar from './components/layout/Navbar.jsx';
-import Footer from './components/layout/Footer.jsx';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
-import PrivacyPolicy from './pages/Privacy&Policy';
-import ErrorBoundary from './components/ErrorBoundary';
-import './styles/App.css';
+import { AppProvider } from '@/context/AppContext.jsx';
+import Navbar from '@/components/layout/Navbar.jsx';
+import Footer from '@/components/layout/Footer.jsx';
+import Home from '@/pages/Home';
+import About from '@/pages/About';
+import Contact from '@/pages/Contact';
+import NotFound from '@/pages/NotFound';
+import PrivacyPolicy from '@/pages/Privacy&Policy';
+import ErrorBoundary from '@/components/ErrorBoundary';
+import '@/styles/App.css';
 
 function App() {
   return (
