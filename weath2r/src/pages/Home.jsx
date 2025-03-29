@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import { useApp } from '../context/AppContext';
-import { getCurrentWeather, getForecast } from '../services/api/weatherApi';
-import CurrentWeather from '../components/weather/CurrentWeather';
-import SearchBar from '../components/weather/SearchBar';
-import Forecast from '../components/weather/Forecast';
-import WeatherMap from '../components/weather/WeatherMap';
-import WeatherStats from '../components/weather/WeatherStats';
-import LoadingSpinner from '../components/LoadingSpinner';
+import { useApp } from '@/context/AppContext';
+import { getCurrentWeather, getForecast } from '@/services/api/weatherApi';
+import CurrentWeather from '@/components/weather/CurrentWeather';
+import SearchBar from '@/components/weather/SearchBar';
+import Forecast from '@/components/weather/Forecast';
+import WeatherMap from '@/components/weather/WeatherMap';
+import WeatherStats from '@/components/weather/WeatherStats';
+import LoadingSpinner from '@/components/LoadingSpinner';
 
 export default function Home() {
   const { location } = useApp();

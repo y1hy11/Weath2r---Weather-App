@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useApp } from '../../context/AppContext';
-import { searchLocations } from '../../services/api/weatherApi';
+import { useApp } from '@/context/AppContext';
+import { searchLocations } from '@/services/api/weatherApi';
 
 export default function SearchBar() {
   const [query, setQuery] = useState('');
