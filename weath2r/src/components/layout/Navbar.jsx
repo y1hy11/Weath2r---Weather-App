@@ -71,7 +71,7 @@ export default function Navbar() {
     >
       <div className="navbar-brand">
         <Link to="/">
-          <img src="/assets/Logo1.svg" alt="Weath2r Logo" className="logo" />
+          <img src="./src/assets/Logo1.svg" alt="Weath2r Logo" className="logo" />
         </Link>
       </div>
 

@@ -11,7 +11,7 @@ const About = lazy(() => import('@/pages/About'));
 const Contact = lazy(() => import('@/pages/Contact'));
 const NotFound = lazy(() => import('@/pages/NotFound'));
 const PrivacyPolicy = lazy(() => import('@/pages/Privacy&Policy'));
-const HeadImg = "/assets/HeadImg.svg";
+const HeadImg = "./public/HeadImg.svg";
 
 function PageContainer() {
   const location = useLocation();
