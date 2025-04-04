@@ -4,7 +4,7 @@
   align-items: center;
   padding: 1rem 1rem;
   background-color: var(--bg-light);
-  border: 1px solid rgba(var(--primary-color-rgb), 0.1);
+  border: 1px solid var(--primary-color-rgb);
   box-shadow: var(--box-shadow);
   position: relative;
   top: 0;
@@ -47,7 +47,7 @@
   gap: 2rem;
   align-items: center;
   position: absolute;
-  left: 50%;
+  left: 45%;
   transform: translateX(-50%);
 }
 
