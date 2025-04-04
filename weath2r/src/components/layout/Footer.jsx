@@ -11,7 +11,7 @@ export default function Footer() {
     >
       <div className="footer-content">
         <div className="footer-section brand">
-          <img src="/assets/Logo1.svg" alt="Weath2r Logo" className="footer-logo" />
+          <img src="./src/assets/Logo1.svg" alt="Weath2r Logo" className="footer-logo" />
           <p>Your trusted weather companion, providing accurate forecasts 24/7</p>
         </div>
         <div className="footer-section links">
