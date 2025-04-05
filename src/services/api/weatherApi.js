@@ -1,6 +1,9 @@
+// OpenWeather API configuration
 const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
+
+// Fetches current weather data for a given location
 export async function getCurrentWeather(location) {
   const response = await fetch(
     `${BASE_URL}/weather?q=${location}&appid=${API_KEY}&units=metric`
@@ -9,6 +12,7 @@ export async function getCurrentWeather(location) {
   return formatCurrentWeather(data);
 }
 
+// Fetches 5-day forecast data for a given location
 export async function getForecast(location) {
   const response = await fetch(
     `${BASE_URL}/forecast?q=${location}&appid=${API_KEY}&units=metric`
@@ -17,6 +21,7 @@ export async function getForecast(location) {
   return formatForecastData(data);
 }
 
+// Searches for locations matching the query string
 export async function searchLocations(query) {
   const response = await fetch(
     `http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${API_KEY}`
@@ -31,6 +36,7 @@ export async function searchLocations(query) {
   }));
 }
 
+// Formats raw weather data into a standardized structure
 function formatCurrentWeather(data) {
   return {
     location: {
@@ -60,6 +66,7 @@ function formatCurrentWeather(data) {
   };
 }
 
+// Formats raw forecast data into a standardized structure
 function formatForecastData(data) {
   return {
     forecast: {
