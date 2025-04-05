@@ -1,7 +1,9 @@
 {
-    "compilerOptions": {
-        "paths": {
-            "@/*": ["./src/*"],  
-        },
+  // Compiler options for the JavaScript project
+  "compilerOptions": {
+    // Define path aliases for cleaner imports
+    "paths": {
+      "@/*": ["./src/*"] // The "@" alias maps to the "src" folder
     }
+  }
 }

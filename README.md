@@ -21,7 +21,6 @@ A modern, responsive weather application built with React that provides real-tim
 - Leaflet/React-Leaflet
 - OpenWeather API
 - CSS3 with CSS Variables
-- Vite
 
 ## Getting Started
 
@@ -34,7 +33,7 @@ A modern, responsive weather application built with React that provides real-tim
 
 1. Clone the repository
 ```bash
-git clone https://github.com/Y1hy11/Advanced-Weather_App_react.git
+git clone https://github.com/Y1hy11/Weath2r---Weather-App.git
 ```
 
 2. Navigate to the project directory
