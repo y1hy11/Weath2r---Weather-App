@@ -1,3 +1,4 @@
+/* Main style imports for the application */
 @import '@/styles/base/utilities.css';
 @import '@/styles/base/variables.css';
 @import '@/styles/components/layout/Navbar.css';
