@@ -1,14 +1,17 @@
+/* Base body styles */
 body {
   background-color: var(--bg-light);
   color: var(--text-light);
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
+/* Dark mode styles */
 body.dark-mode {
   background-color: var(--bg-dark);
   color: var(--text-dark);
 }
 
+/* Decorative background pattern */
 .background-pattern {
   position: fixed;
   top: 0;
