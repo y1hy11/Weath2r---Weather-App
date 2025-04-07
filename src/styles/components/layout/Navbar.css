@@ -1,3 +1,4 @@
+/* Main navigation bar container */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -14,12 +15,14 @@
   color: var(--text-light);
 }
 
+/* Brand section styles */
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
   flex: 0 0 auto;
 }
 
+/* Brand link styles */
 .navbar-brand a {
   display: flex;
   align-items: center;
@@ -28,20 +31,24 @@
   font-weight: bold;
 }
 
+/* Dark mode brand link color */
 .dark-mode .navbar-brand a {
   color: var(--text-dark);
 }
 
+/* Logo image styles */
 .logo {
   height: 50px;
   width: auto;
   transition: transform 0.3s ease;
 }
 
+/* Logo hover animation */
 .logo:hover {
   transform: scale(1.05);
 }
 
+/* Navigation links container */
 .navbar-links {
   display: flex;
   gap: 2rem;
@@ -51,6 +58,7 @@
   transform: translateX(-50%);
 }
 
+/* Individual navigation link styles */
 .navbar-links a {
   text-decoration: none;
   color: var(--text-light);
@@ -59,6 +67,7 @@
   padding: 0.5rem 0;
 }
 
+/* Underline animation for links */
 .navbar-links a::after {
   content: "";
   position: absolute;
@@ -70,11 +79,13 @@
   transition: width 0.3s ease;
 }
 
+/* Underline animation on hover and active state */
 .navbar-links a:hover::after,
 .navbar-links a.active::after {
   width: 100%;
 }
 
+/* Theme toggle button styles */
 .theme-toggle {
   background: none;
   border: none;
@@ -85,21 +96,19 @@
   color: var(--text-light);
 }
 
+/* Theme toggle hover animation */
 .theme-toggle:hover {
   transform: rotate(15deg) scale(1.1);
   color: var(--primary-color);
 }
 
+/* Floating animation keyframes */
 @keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 
+/* Dark mode styles */
 .dark-mode .navbar {
   background-color: rgba(var(--bg-dark), 0.8);
   color: var(--text-dark);
@@ -113,6 +122,7 @@
   color: var(--text-dark);
 }
 
+/* Mobile menu toggle button (hidden by default) */
 .mobile-menu-toggle {
   display: none;
   background: none;
@@ -122,6 +132,7 @@
   color: var(--text-light);
 }
 
+/* Controls container (theme toggle, etc.) */
 .navbar-controls {
   display: flex;
   align-items: center;
@@ -129,6 +140,7 @@
   margin-left: auto;
 }
 
+/* Mobile navigation container */
 .navbar-mobile-container {
   display: flex;
   align-items: center;
@@ -138,6 +150,7 @@
   position: relative;
 }
 
+/* Mobile responsive styles */
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem;
