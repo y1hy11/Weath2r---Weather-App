@@ -2,6 +2,9 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
+// Import Logo Img
+import Logo from '@/assets/Logo1.svg';
+
 // Footer Component With Motion animation effects
 export default function Footer() {
   return (
@@ -18,7 +21,7 @@ export default function Footer() {
         {/* Brand section with logo and tagline */}
         <div className="footer-section brand">
           <img
-            src="./src/assets/Logo1.svg"
+            src={Logo}
             alt="Weath2r Logo"
             className="footer-logo"
           />
