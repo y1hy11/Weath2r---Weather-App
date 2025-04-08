@@ -16,7 +16,6 @@ const NotFound = lazy(() => import("@/pages/NotFound"));
 const PrivacyPolicy = lazy(() => import("@/pages/Privacy&Policy"));
 
 // Styles and Loading Image Imports
-const HeadImg = "@/assets/HeadImg.svg";
 import "@/styles/App.css";
 
 // PageContainer component handles routing and loading states
@@ -37,7 +36,7 @@ function PageContainer() {
   if (isLoading) {
     return (
       <div className="loader-content">
-        <img src={HeadImg} alt="Loading" className="loader-logo" />
+        <img src="@/assets/HeadImg.svg" alt="Loading" className="loader-logo" />
       </div>
     );
   }
