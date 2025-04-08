@@ -19,7 +19,7 @@ body.dark-mode {
   right: 0;
   bottom: 0;
   z-index: -1;
-  background-image: url('./public/HeadImg.svg');
+  background-image: url('@/assets/HeadImg.svg');
   background-size: 200px 100px;
   background-position: 100% 100%;
   background-repeat: repeat;

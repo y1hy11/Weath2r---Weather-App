@@ -4,6 +4,9 @@ import { useState, useEffect } from 'react';
 import { useApp } from '@/context/AppContext';
 import { motion } from 'framer-motion';
 
+// Import Logo Img
+import Logo from '@/assets/Logo1.svg';
+
 // SVG Icon Components
 // Moon icon for dark mode toggle
 const MoonIcon = () => (
@@ -87,7 +90,7 @@ export default function Navbar() {
       {/* Logo/Brand section */}
       <div className="navbar-brand">
         <Link to="/">
-          <img src="./src/assets/Logo1.svg" alt="Weath2r Logo" className="logo" />
+          <img src={Logo} alt="Weath2r Logo" className="logo" />
         </Link>
       </div>
 
