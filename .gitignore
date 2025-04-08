@@ -12,6 +12,11 @@ lerna-debug.log*
 dist
 dist-ssr
 
+# Environment Variables
+.env
+.env.local
+.env.*
+!.env.example
 
 # Editor directories and files
 .vscode/*
