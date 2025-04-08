@@ -15,7 +15,7 @@ const Contact = lazy(() => import("@/pages/Contact"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
 const PrivacyPolicy = lazy(() => import("@/pages/Privacy&Policy"));
 
-// Styles and Loading Image Imports
+// Styles  Import
 import "@/styles/App.css";
 
 // PageContainer component handles routing and loading states
@@ -65,7 +65,7 @@ function App() {
               <Suspense
                 fallback={
                   <div className="loader-content">
-                    <img src={HeadImg} alt="Loading" className="loader-logo" />
+                    <img src="@/assets/HeadImg.svg" alt="Loading" className="loader-logo" />
                   </div>
                 }
               >
