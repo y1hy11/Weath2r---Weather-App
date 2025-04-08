@@ -6,7 +6,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   // Configure plugins - React support for Vite
   plugins: [react()],
-
+  
   // Configure module resolution
   resolve: {
     // Set up path aliases for cleaner imports
