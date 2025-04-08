@@ -1,7 +1,11 @@
 // OpenWeather API configuration
 const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
-const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
+if (!API_KEY) {
+  console.error('OpenWeather API key is not defined in environment variables');
+}
+
+const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
 // Fetches current weather data for a given location
 export async function getCurrentWeather(location) {
@@ -23,8 +27,12 @@ export async function getForecast(location) {
 
 // Searches for locations matching the query string
 export async function searchLocations(query) {
+  if (!API_KEY) {
+    throw new Error('API key is not configured');
+  }
+  
   const response = await fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${API_KEY}`
+    `https://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${API_KEY}`
   );
   const data = await response.json();
   return data.map(item => ({
