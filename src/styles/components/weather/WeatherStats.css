@@ -1,3 +1,4 @@
+/* Weather stats container */
 .weather-stats {
   padding: 2rem;
   background: var(--bg-light);
@@ -6,10 +7,12 @@
   margin: 2rem 0;
 }
 
+/* Dark mode container styling */
 .dark-mode .weather-stats {
   background: var(--bg-dark);
 }
 
+/* Stats grid container */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -17,6 +20,7 @@
   margin-top: 1.5rem;
 }
 
+/* Individual stat item styling */
 .stat-item {
   padding: 1.2rem;
   background: linear-gradient(135deg, 
@@ -29,6 +33,7 @@
   border: 1px solid rgba(var(--primary-color-rgb), 0.1);
 }
 
+/* Dark mode stat item styling */
 .dark-mode .stat-item {
   background: linear-gradient(135deg,
     rgba(var(--primary-color-rgb), 0.15),
@@ -41,11 +46,13 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Hover effects for stat items */
 .stat-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(var(--primary-color-rgb), 0.15);
 }
 
+/* Stat label text styling */
 .stat-label {
   font-size: 0.9rem;
   color: var(--text-light);
@@ -54,10 +61,12 @@
   display: block;
 }
 
+/* Dark mode label styling */
 .dark-mode .stat-label {
   color: var(--text-dark);
 }
 
+/* Stat value text styling */
 .stat-value {
   font-size: 1.4rem;
   font-weight: bold;
@@ -66,14 +75,17 @@
   transition: transform 0.3s ease;
 }
 
+/* Dark mode value styling */
 .dark-mode .stat-value {
   color: var(--secondary-color);
 }
 
+/* Value hover animation */
 .stat-item:hover .stat-value {
   transform: scale(1.1);
 }
 
+/* Mobile layout adjustments */
 @media (max-width: 768px) {
   .weather-stats {
     padding: 1.5rem;

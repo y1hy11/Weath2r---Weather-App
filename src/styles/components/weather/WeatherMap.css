@@ -1,5 +1,8 @@
+/* Importing Leaflet CSS for map functionality */
 @import 'leaflet/dist/leaflet.css';
 
+
+/* Weather Map Container Styling  */
 .weather-map {
   height: 400px;
   width: 100%;
@@ -14,6 +17,7 @@
   background-color: var(--bg-light);
 }
 
+/* Map overlay gradient effect */
 .weather-map::before {
   content: '';
   position: absolute;
@@ -26,19 +30,23 @@
   z-index: 2;
 }
 
+/* Map hover effects */
 .weather-map:hover {
   transform: scale(1.01);
   box-shadow: 0 8px 30px rgba(0,0,0,0.15);
 }
 
+/* Map marker icon animation effects */
 .weather-map .leaflet-marker-icon {
   transition: transform 0.3s var(--animation-timing);
 }
 
+/* Map marker icon hover effects */
 .weather-map:hover .leaflet-marker-icon {
   transform: scale(1.2) translateY(-5px);
 }
 
+/* Marker animations */
 .custom-marker {
   font-size: 2rem;
   text-align: center;
@@ -46,6 +54,7 @@
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
+/* Leaflet container setup */
 .leaflet-container {
   height: 100%;
   width: 100%;
@@ -54,15 +63,18 @@
   height: 100% !important;
 }
 
+/* Control container positioning */
 .leaflet-control-container {
   position: absolute;
   z-index: 2;
 }
 
+/* Dark mode map tiles */
 .dark-mode .leaflet-tile {
   filter: invert(1) hue-rotate(180deg);
 }
 
+/* Dark theme specific styles */
 .dark-theme .leaflet-tile {
   filter: invert(1) hue-rotate(180deg) brightness(0.9);
 }
@@ -71,10 +83,12 @@
   background: #333;
 }
 
+/* Attrubtion Style */
 .leaflet-control-attribution {
   font-size: 10px;
 }
 
+/* Map error state styling */
 .map-error {
   height: 400px;
   display: flex;
@@ -86,11 +100,13 @@
   border: 2px dashed var(--primary-color);
 }
 
+/* Dark theme controls */
 .dark-theme .leaflet-control-zoom a {
   color: #000;
   background: #fff;
 }
 
+/* Z-index configuration for map layers */
 .leaflet-map-pane {
   z-index: 1;
 }
@@ -99,18 +115,19 @@
   z-index: 1;
 }
 
+/* Home page specific map styling */
 .home .weather-map {
   min-height: 400px;
   display: block;
   position: relative;
 }
 
-
-
+/* Base section container */
 .map-section {
   padding: 2rem 0;
 }
 
+/* Section header styling */
 .map-section h1 {
   font-size: 2rem;
   color: var(--primary-color);
@@ -118,6 +135,7 @@
   margin-bottom: 1rem;
 }
 
+/* Section description text */
 .map-section p {
   text-align: center;
   color: var(--text-light);
@@ -125,6 +143,7 @@
   font-size: 1.1rem;
 }
 
+/* Main map container */
 .map-container {
   position: relative;
   height: 500px;
@@ -132,6 +151,7 @@
   overflow: hidden;
 }
 
+/* Tab navigation */
 .map-tabs {
   display: flex;
   gap: 1rem;
@@ -139,6 +159,7 @@
   justify-content: center;
 }
 
+/* Individual tab styling */
 .map-tab {
   padding: 0.5rem 1.5rem;
   border: none;
@@ -150,25 +171,30 @@
   font-weight: 500;
 }
 
+/* Active tab state */
 .map-tab.active {
   background: var(--primary-color);
   color: white;
 }
 
+/* Dark mode text colors */
 .dark-mode .map-section p {
   color: var(--text-dark);
 }
 
+/* Dark mode tab styling */
 .dark-mode .map-tab {
   background: var(--bg-dark);
   color: var(--text-dark);
 }
 
+/* Dark mode active tab */
 .dark-mode .map-tab.active {
   background: var(--primary-color);
   color: white;
 }
 
+/* Header container */
 .map-header {
   text-align: center;
   max-width: 800px;
@@ -176,6 +202,7 @@
   padding: 0 1rem;
 }
 
+/* Header title */
 .map-header h2 {
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   color: var(--primary-color);
@@ -183,6 +210,7 @@
   color: var(--primary-color);
 }
 
+/* Header description */
 .map-description {
   font-size: clamp(1rem, 2vw, 1.2rem);
   line-height: 1.6;
@@ -190,6 +218,7 @@
   opacity: 0.9;
 }
 
+/* Map tab styling */
 .map-tab {
   display: flex;
   align-items: center;
@@ -199,10 +228,12 @@
   border: 2px solid var(--primary-color);
 }
 
+/* Dark Mode Map Description */
 .dark-mode .map-description {
   color: var(--text-dark);
 }
 
+/* Static map container */
 .static-map {
   position: relative;
   width: 100%;
@@ -213,6 +244,7 @@
   box-shadow: var(--box-shadow);
 }
 
+/* Map image styling */
 .map-image {
   width: 100%;
   height: 100%;
@@ -220,10 +252,12 @@
   transition: opacity 0.3s ease;
 }
 
+/* Image hover effects */
 .map-image:hover {
   opacity: 0.9;
 }
 
+/* Image container wrapper */
 .map-image-container {
   width: 100%;
   height: 400px;
@@ -235,6 +269,7 @@
   min-height: 400px;
 }
 
+/* Map Image Styling */
 .map-image {
   width: 100%;
   height: 100%;
@@ -242,6 +277,7 @@
   background: var(--bg-light);
 }
 
+/* Map iframe styling */
 .weather-map-iframe {
   border: none;
   border-radius: var(--border-radius);
@@ -251,8 +287,7 @@
   min-height: 400px;
 }
 
-
-
+/* Legend styling */
 .map-legend {
   display: flex;
   align-items: center;
@@ -266,6 +301,7 @@
   color: var(--text-light);
 }
 
+/* Menu toggle button */
 .map-menu-toggle {
   position: absolute;
   top: 1rem;
@@ -279,10 +315,12 @@
   transition: transform 0.3s ease;
 }
 
+/* Menu toggle hover effects */
 .map-menu-toggle:hover {
   transform: translateY(-2px);
 }
 
+/* Menu container */
 .map-menu {
   position: absolute;
   top: 0;
@@ -295,16 +333,19 @@
   box-shadow: 2px 0 10px rgba(0,0,0,0.1);
 }
 
+/* Menu header */
 .map-menu h3 {
   margin-bottom: 1rem;
   color: var(--primary-color);
 }
 
+/* Menu list */
 .map-menu ul {
   list-style: none;
   padding: 0;
 }
 
+/* Menu items */
 .map-menu li {
   padding: 1rem;
   border-bottom: 1px solid rgba(0,0,0,0.1);
@@ -312,22 +353,26 @@
   transition: background-color 0.3s ease;
 }
 
+/* Menu item hover effects */
 .map-menu li:hover {
   background-color: rgba(var(--primary-color-rgb), 0.1);
 }
 
+/* Map iframe container */
 .weather-map-iframe {
   width: 100%;
   height: 100%;
   border: none;
 }
 
+/* Dark mode menu styling */
 .dark-mode .map-menu,
 .dark-mode .map-menu-toggle {
   background: var(--bg-dark);
   color: var(--text-dark);
 }
 
+/* Responsive styles for mobile devices */
 @media (max-width: 768px) {
   .map-section {
     display: none;
