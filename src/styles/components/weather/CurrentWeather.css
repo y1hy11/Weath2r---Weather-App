@@ -1,3 +1,4 @@
+/* Main weather container styling */
 .current-weather {
   background: var(--primary-color);
   color: white;
@@ -10,10 +11,12 @@
   animation: none;
 }
 
+/* Dark mode specific styling for the weather container */
 .dark-mode .current-weather {
   background: linear-gradient(135deg, var(--bg-dark), rgba(var(--primary-color-rgb), 0.3));
 }
 
+/* Grid pattern overlay for visual texture */
 .current-weather::before {
   content: '';
   position: absolute;
@@ -27,6 +30,7 @@
   opacity: 0.2;
 }
 
+/* Main content area for current weather information */
 .current-weather-main {
   text-align: center;
   margin-bottom: 2rem;
@@ -34,11 +38,13 @@
   z-index: 1;
 }
 
+/* Header styling for location name */
 .current-weather-main h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
+/* Current temperature display styling */
 .current-temp {
   font-size: 5rem;
   font-weight: bold;
@@ -47,11 +53,25 @@
   animation: fadeInUp 0.5s ease;
 }
 
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Temperature unit indicator styling */
 .unit {
   font-size: 2rem;
   opacity: 0.8;
 }
 
+/* Grid layout for weather detail items */
 .weather-details-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -59,6 +79,7 @@
   margin-top: 2rem;
 }
 
+/* Individual weather detail card styling */
 .detail-item {
   display: flex;
   flex-direction: column;
@@ -71,31 +92,37 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Dark mode specific styling for detail items */
 .dark-mode .detail-item {
   background: rgba(255, 255, 255, 0.05);
 }
 
+/* Hover effects for detail items */
 .detail-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 
+/* Detail item text styling */
 .detail-item span:first-child {
   font-size: 0.9rem;
   opacity: 0.8;
   margin-bottom: 0.5rem;
 }
 
+/* Detail item value styling */
 .detail-item span:last-child {
   font-size: 1.2rem;
   font-weight: bold;
 }
 
+/* Date and time display styling */
 .datetime {
   margin: 1rem 0;
   opacity: 0.9;
 }
 
+/* Date and time text styling */
 .time {
   font-size: 2rem;
   font-weight: bold;
@@ -106,6 +133,7 @@
   font-size: 1.1rem;
 }
 
+/* Temperature unit toggle button styling */
 .unit-toggle {
   background: rgba(255, 255, 255, 0.2);
   border: none;
@@ -118,11 +146,20 @@
   transition: all 0.3s ease;
 }
 
+/* Hover effect for unit toggle button */
 .unit-toggle:hover {
   background: rgba(255, 255, 255, 0.3);
   transform: scale(1.1);
 }
 
+/* Background gradient animation */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Responsive design adjustments */
 @media (max-width: 768px) {
   .current-temp {
     font-size: 4rem;
@@ -151,21 +188,4 @@
   .datetime .time {
     font-size: 1.5rem;
   }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
 }

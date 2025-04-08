@@ -1,28 +1,22 @@
+/* Container for the entire forecast section */
 .forecast {
   margin: 2rem 0;
 }
 
+/* Section title styling */
 .forecast h2 {
   margin-bottom: 1.5rem;
   color: var(--text-light);
 }
 
+/* Grid layout for forecast cards */
 .forecast-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
 }
 
-.dark-mode .forecast h2 {
-  color: var(--text-dark);
-}
-
-@media (max-width: 768px) {
-  .forecast-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
+/* Base card styling */
 .forecast-card {
   background: var(--bg-light);
   border-radius: var(--border-radius);
@@ -34,22 +28,26 @@
   border: 1px solid rgba(var(--primary-color-rgb), 0.1);
 }
 
+/* Card hover effects */
 .forecast-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
+/* Card icon hover animation */
 .forecast-card:hover .forecast-icon img {
   transform: scale(1.2) translateY(-5px);
   filter: drop-shadow(0 4px 8px rgba(var(--primary-color-rgb), 0.3));
 }
 
+/* Date display styling */
 .forecast-date {
   font-weight: 500;
   margin-bottom: 1rem;
   color: var(--primary-color);
 }
 
+/* Weather icon container */
 .forecast-icon {
   margin: 1rem 0;
   display: flex;
@@ -60,6 +58,7 @@
   height: 64px;
 }
 
+/* Weather icon image */
 .forecast-icon img {
   width: 64px;
   height: 64px;
@@ -71,10 +70,7 @@
   background: transparent;
 }
 
-.dark-mode .forecast-icon img {
-  filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.1));
-}
-
+/* Temperature container */
 .forecast-temp {
   display: flex;
   gap: 0.5rem;
@@ -84,51 +80,67 @@
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
+/* Temperature hover animation */
 .forecast-card:hover .forecast-temp {
   color: var(--primary-color);
   transform: scale(1.05);
 }
 
+/* High temperature display */
 .forecast-temp .high {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--primary-color);
 }
 
+/* Low temperature display */
 .forecast-temp .low {
   font-size: 1.2rem;
   opacity: 0.7;
 }
 
+/* Weather condition text */
 .forecast-condition {
   font-size: 0.9rem;
   color: var(--text-light);
   opacity: 0.8;
 }
 
+/* Dark mode card styling */
 .dark-mode .forecast-card {
   background-color: var(--bg-dark);
   border: 1px solid rgba(var(--primary-color-rgb), 0.2);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Dark mode condition styling */
 .dark-mode .forecast-condition {
   color: var(--text-dark);
 }
 
+/* Dark mode date styling */
 .dark-mode .forecast-date {
   color: var(--secondary-color);
 }
 
+/* Dark mode card hover effects */
 .dark-mode .forecast-card:hover {
   box-shadow: 0 8px 30px rgba(var(--primary-color-rgb), 0.15);
   border-color: rgba(var(--primary-color-rgb), 0.3);
 }
 
+/* Dark mode temperature colors */
 .dark-mode .forecast-temp .high {
   color: var(--secondary-color);
 }
 
 .dark-mode .forecast-temp .low {
   color: rgba(255, 255, 255, 0.7);
+}
+
+/* Mobile layout adjustments */
+@media (max-width: 768px) {
+  .forecast-grid {
+    grid-template-columns: 1fr;
+  }
 }
