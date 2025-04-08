@@ -2,7 +2,9 @@
 const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
 
 if (!API_KEY) {
-  console.error('OpenWeather API key is not defined in environment variables');
+  throw new Error(
+    'OpenWeather API key is not configured. Please add VITE_OPENWEATHER_API_KEY to your .env file'
+  );
 }
 
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
