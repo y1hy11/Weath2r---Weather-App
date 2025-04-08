@@ -4,7 +4,7 @@
 @import './components/layout/Navbar.css';
 @import './components//layout/Footer.css';
 @import './components//weather/SearchBar.css';
-@import './components/weather/Weather.css';
+@import './components/weather/weather.css';
 @import './components/weather/WeatherCard.css';
 @import './components/weather/WeatherMap.css';
 @import './components/weather/WeatherStats.css';
