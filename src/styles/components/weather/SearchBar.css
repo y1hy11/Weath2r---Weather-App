@@ -1,9 +1,11 @@
+/* Search Container Styling */
 .search-container {
   position: relative;
   max-width: 600px;
   margin: 8rem auto;
 }
 
+/* Search Input Styling */
 .search-input {
   width: 100%;
   padding: 1.2rem;
@@ -16,12 +18,14 @@
   border-color: rgba(var(--primary-color-rgb), 0.3);
 }
 
+/* Dark mode input styling */
 .dark-mode .search-input {
   background: var(--bg-dark);
   color: var(--text-dark);
   border-color: rgba(var(--primary-color-rgb), 0.5);
 }
 
+/* Input focus states */
 .search-input:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(0, 136, 204, 0.3);
@@ -37,6 +41,7 @@
   outline-offset: 2px;
 }
 
+/* Suggestions Dropdown UI */
 .search-suggestions {
   position: absolute;
   width: 100%;
@@ -52,12 +57,14 @@
   border-color: rgba(var(--primary-color-rgb), 0.2);
 }
 
+/* Dark mode suggestions styling */
 .dark-mode .search-suggestions {
   background: var(--bg-dark);
   border-color: rgba(var(--primary-color-rgb), 0.4);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Dropdown animation */
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -69,6 +76,7 @@
   }
 }
 
+/* Suggestion List Items UI */
 .search-suggestions li {
   padding: 1rem;
   cursor: pointer;
@@ -79,19 +87,23 @@
   transform-origin: left;
 }
 
+/* Location name styling */
 .LocName {
   margin-left: 1.5rem;
 }
 
+/* Dark mode list items */
 .dark-mode .search-suggestions li {
   border-bottom-color: rgba(255, 255, 255, 0.1);
   color: var(--text-dark);
 }
 
+/* Last item border removal */
 .search-suggestions li:last-child {
   border-bottom: none;
 }
 
+/* Hover effects */
 .search-suggestions li:hover {
   background: var(--primary-color);
   color: white;
@@ -99,6 +111,7 @@
   background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
 }
 
+/* Search icon before list items */
 .search-suggestions li::before {
   content: '🔍';
   position: absolute;
@@ -107,10 +120,10 @@
   transition: all 0.3s ease;
 }
 
+/* Search icon hover effect */
 .search-suggestions li:hover::before {
   opacity: 1;
-}
-
+}/* Touch Device Support */
 @media (hover: none) {
   .search-suggestions li {
     padding: 1rem 1.5rem;
@@ -123,6 +136,7 @@
   }
 }
 
+/* Typography Styles */
 .search-container h1 {
   font-size: 2.5rem;
   text-align: center;
@@ -139,10 +153,13 @@
   font-weight: 500;
 }
 
+/* Dark mode typography */
 .dark-mode .search-container h2 {
   color: var(--text-dark);
 }
 
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .search-container h1 {
     font-size: 2rem;
