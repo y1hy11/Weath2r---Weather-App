@@ -11,7 +11,11 @@
   font-size: 6rem;
   color: var(--primary-color);
   margin: 0;
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 4px 15px rgba(var(--primary-color-rgb), 0.2);
@@ -39,7 +43,11 @@
 .home-link {
   display: inline-block;
   padding: 0.8rem 1.5rem;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   color: white;
   text-decoration: none;
   border-radius: var(--border-radius);
@@ -62,23 +70,23 @@
 
 /* Mobile responsive styles */
 @media (max-width: 768px) {
-    .not-found {
+  .not-found {
     padding: 10rem 1rem;
   }
 
-    .not-found h1 {
+  .not-found h1 {
     font-size: 4rem;
   }
 
-    .not-found h2 {
+  .not-found h2 {
     font-size: 1.5rem;
   }
 
-    .not-found p {
+  .not-found p {
     font-size: 0.95rem;
   }
 
-    .home-link {
+  .home-link {
     padding: 0.7rem 1.2rem;
   }
 }

@@ -15,7 +15,7 @@
   margin-bottom: 1rem;
   box-shadow: 0 0 10px rgba(0, 136, 204, 0.2);
   animation: spin 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite,
-             glow 2s ease-in-out infinite;
+    glow 2s ease-in-out infinite;
 }
 
 .loading-container p {
@@ -25,21 +25,30 @@
 }
 
 @keyframes pulse {
-  0% { opacity: 0.6; }
-  50% { opacity: 1; }
-  100% { opacity: 0.6; }
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes glow {
-  0%, 100% { 
+  0%,
+  100% {
     box-shadow: 0 0 10px rgba(var(--primary-color-rgb), 0.2);
     transform: rotate(0deg) scale(1);
   }
-  50% { 
+  50% {
     box-shadow: 0 0 20px rgba(var(--primary-color-rgb), 0.4);
     transform: rotate(180deg) scale(1.1);
   }
@@ -69,7 +78,6 @@
   opacity: 0;
   animation: pulseAndFade 1.5s ease-in-out infinite alternate;
 }
-
 
 @keyframes pulseAndFade {
   0% {

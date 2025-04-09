@@ -47,7 +47,7 @@
 
 /* Arrow decoration before section headings */
 .policy-content h2::before {
-  content: '→';
+  content: "→";
   color: var(--primary-color);
   font-size: 1.5rem;
 }
@@ -85,27 +85,27 @@
 
 /* Responsive styles for mobile devices */
 @media (max-width: 768px) {
-    .privacy-policy {
+  .privacy-policy {
     padding: 1.5rem;
   }
 
-    .privacy-policy h1 {
+  .privacy-policy h1 {
     font-size: 1.8rem;
   }
 
-    .policy-content {
+  .policy-content {
     margin-top: 1.5rem;
   }
 
-    .policy-content section {
+  .policy-content section {
     margin-bottom: 1.5rem;
   }
 
-    .policy-content h2 {
+  .policy-content h2 {
     font-size: 1.3rem;
   }
 
-    .policy-content p {
+  .policy-content p {
     font-size: 0.95rem;
   }
 }

@@ -32,21 +32,19 @@ A modern, feature-rich weather application built with React that provides real-t
 ### Installation
 
 1. Clone the repository
+
 ```bash
 git clone https://github.com/Y1hy11/Weath2r---Weather-App.git
 ```
 
-2. Navigate to the project directory
-```bash
-cd weath2r
-```
+2. Install dependencies
 
-3. Install dependencies
 ```bash
 pnpm install
 ```
 
-4. Configure API Key
+3. Configure API Key
+
 ```bash
 # Option 1: Using Vercel (Recommended)
 # The API key is already configured in Vercel's environment variables
@@ -57,7 +55,7 @@ pnpm install
  OPENWEATHER_API_KEY=your_api_key_here
 
 # Option 3: Other Deployment Platforms
-# Set the environment variable VITE_OPENWEATHER_API_KEY in your platform:
+# Set the environment variable OPENWEATHER_API_KEY in your platform:
 # - Netlify: Site settings > Build & deploy > Environment variables
 # - Heroku: Settings > Config Vars
 # - Railway: Project settings > Environment variables
@@ -67,7 +65,8 @@ pnpm install
 # https://openweathermap.org/api
 ```
 
-5. Start the development server
+4. Start the development server
+
 ```bash
 pnpm dev
 ```
@@ -97,4 +96,11 @@ Project Link: [https://github.com/Y1hy11/Weath2r---Weather-App](https://github.c
 
 ---
 
-<p align="center">If you found this project helpful, please consider giving it a ⭐️</p>
+<p align="center">If you found this project helpful, please consider giving it a <span style="display: inline-block; animation: starbeat 1.5s ease infinite;">⭐</span></p>
+
+<style>
+@keyframes starbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+</style>

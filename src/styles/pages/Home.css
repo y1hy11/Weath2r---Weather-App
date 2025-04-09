@@ -37,21 +37,21 @@
 
 /* Responsive styles for mobile devices */
 @media (max-width: 768px) {
-    .home {
+  .home {
     padding: 1rem;
   }
 
-    .error-message {
+  .error-message {
     margin: 1rem auto;
     padding: 0.8rem;
     font-size: 0.95rem;
   }
 
-    .loading-container {
+  .loading-container {
     min-height: 200px;
   }
 
-    .loading-spinner {
+  .loading-spinner {
     width: 30px;
     height: 30px;
     border-width: 3px;

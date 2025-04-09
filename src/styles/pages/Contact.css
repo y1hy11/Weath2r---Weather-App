@@ -132,15 +132,25 @@
 
 /* Animation keyframes */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Submit button styles */
 .submit-button {
   width: 100%;
   padding: 1rem;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   color: white;
   border: none;
   border-radius: var(--border-radius);
@@ -161,7 +171,11 @@
 
 /* Dark mode submit button hover */
 .dark-mode .submit-button:hover {
-  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color),
+    var(--primary-color)
+  );
   box-shadow: 0 4px 15px rgba(var(--primary-color-rgb), 0.3);
 }
 
@@ -208,8 +222,14 @@
 
 /* Slide animation keyframes */
 @keyframes slideDown {
-  from { transform: translateY(-10px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Responsive styles for mobile devices */
@@ -227,7 +247,7 @@
     font-size: 1rem;
     margin-bottom: 2rem;
   }
-  
+
   .contact-form {
     padding: 1.5rem;
   }

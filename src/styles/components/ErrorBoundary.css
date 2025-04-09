@@ -4,7 +4,11 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background: linear-gradient(to bottom right, var(--bg-light), rgba(var(--primary-color-rgb), 0.05));
+  background: linear-gradient(
+    to bottom right,
+    var(--bg-light),
+    rgba(var(--primary-color-rgb), 0.05)
+  );
 }
 
 .error-content {
@@ -46,7 +50,11 @@
 }
 
 .dark-mode .error-boundary {
-  background: linear-gradient(to bottom right, var(--bg-dark), rgba(255, 255, 255, 0.05));
+  background: linear-gradient(
+    to bottom right,
+    var(--bg-dark),
+    rgba(255, 255, 255, 0.05)
+  );
 }
 
 .dark-mode .error-content {
