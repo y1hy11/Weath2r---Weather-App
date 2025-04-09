@@ -5,7 +5,7 @@
  * The API key is configured in two ways:
  * 1. For production: The API key is set in Vercel environment variables
  * 2. For local development: Create a .env file in the root directory with:
- *    VITE_OPENWEATHER_API_KEY=your_api_key_here
+ *    OPENWEATHER_API_KEY=your_api_key_here
  * 
  * You can get an API key by signing up at: https://openweathermap.org/api  | 
  */
