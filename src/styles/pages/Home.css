@@ -1,9 +1,11 @@
+/* Main container styles */
 .home {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
 }
 
+/* Error message display styles */
 .error-message {
   background: var(--accent-color);
   color: white;
@@ -14,6 +16,7 @@
   max-width: 500px;
 }
 
+/* Loading state container styles */
 .loading-container {
   display: flex;
   flex-direction: column;
@@ -22,6 +25,7 @@
   min-height: 300px;
 }
 
+/* Loading spinner animation styles */
 .loading-spinner {
   width: 40px;
   height: 40px;
@@ -31,22 +35,23 @@
   margin-bottom: 1rem;
 }
 
+/* Responsive styles for mobile devices */
 @media (max-width: 768px) {
-  .home {
+    .home {
     padding: 1rem;
   }
 
-  .error-message {
+    .error-message {
     margin: 1rem auto;
     padding: 0.8rem;
     font-size: 0.95rem;
   }
 
-  .loading-container {
+    .loading-container {
     min-height: 200px;
   }
 
-  .loading-spinner {
+    .loading-spinner {
     width: 30px;
     height: 30px;
     border-width: 3px;

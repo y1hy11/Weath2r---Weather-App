@@ -1,10 +1,12 @@
+/* Main container for 404 page */
 .not-found {
   text-align: center;
   padding: 4rem 2rem;
   max-width: 600px;
   margin: 0 auto;
-  }
+}
 
+/* Large 404 heading with gradient effect */
 .not-found h1 {
   font-size: 6rem;
   color: var(--primary-color);
@@ -15,21 +17,25 @@
   text-shadow: 0 4px 15px rgba(var(--primary-color-rgb), 0.2);
 }
 
+/* Secondary heading styles */
 .not-found h2 {
   font-size: 2rem;
   margin: 1rem 0;
 }
 
+/* Description text styles */
 .not-found p {
   margin-bottom: 2rem;
   color: var(--text-light);
 }
 
+/* Dark mode text adjustment */
 .dark-mode .not-found p {
   color: var(--text-dark);
   opacity: 0.9;
 }
 
+/* Home link/button styles */
 .home-link {
   display: inline-block;
   padding: 0.8rem 1.5rem;
@@ -42,34 +48,37 @@
   box-shadow: 0 4px 15px rgba(var(--primary-color-rgb), 0.2);
 }
 
+/* Home link hover effects */
 .home-link:hover {
   background: var(--secondary-color);
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(var(--primary-color-rgb), 0.3);
 }
 
+/* Dark mode hover effect adjustment */
 .dark-mode .home-link:hover {
   box-shadow: 0 6px 20px rgba(var(--primary-color-rgb), 0.4);
 }
 
+/* Mobile responsive styles */
 @media (max-width: 768px) {
-  .not-found {
+    .not-found {
     padding: 10rem 1rem;
   }
 
-  .not-found h1 {
+    .not-found h1 {
     font-size: 4rem;
   }
 
-  .not-found h2 {
+    .not-found h2 {
     font-size: 1.5rem;
   }
 
-  .not-found p {
+    .not-found p {
     font-size: 0.95rem;
   }
 
-  .home-link {
+    .home-link {
     padding: 0.7rem 1.2rem;
   }
 }
