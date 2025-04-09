@@ -1,14 +1,17 @@
+/* Main container styles */
 .about-page {
   max-width: 1200px;
   margin: 0 auto;
   padding: 4rem 2rem;
 }
 
+/* Header styles */
 .about-header {
   text-align: center;
   margin-bottom: 4rem;
 }
 
+/* Header title styles */
 .about-header h1 {
   font-size: clamp(2rem, 5vw, 3.5rem);
   color: var(--primary-color);
@@ -16,12 +19,14 @@
   color: (--primary-color);
 }
 
+/* Header description styles */
 .about-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
+/* Individual section card styles */
 .about-section {
   padding: 2rem;
   background-color: var(--bg-light);
@@ -29,26 +34,31 @@
   transition: transform 0.3s ease;
 }
 
+/* Hover effect for section cards */
 .about-section:hover {
   transform: translateY(-5px);
 }
 
+/* Section headings */
 .about-section h2 {
   color: var(--primary-color);
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
 }
 
+/* Section paragraph text */
 .about-section p {
   line-height: 1.8;
   color: var(--text-light);
 }
 
+/* Features list container */
 .features ul {
   list-style: none;
   padding: 0;
 }
 
+/* Feature list items */
 .features li {
   padding: 0.8rem 0;
   border-bottom: 1px solid rgba(var(--primary-color-rgb), 0.1);
@@ -57,12 +67,13 @@
   gap: 0.5rem;
 }
 
+/* Arrow icon before feature items */
 .features li::before {
   content: "→";
   color: var(--primary-color);
 }
 
-
+/* Dark mode specific styles */
 .dark-mode .about-section {
   background: var(--bg-dark);
 }
@@ -71,6 +82,34 @@
   color: var(--text-dark);
 }
 
+
+/* Additional content section styles */
+.about-content {
+  margin-top: 2rem;
+}
+
+/* Alternative features list styles */
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.features-list li {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+/* Bullet point before feature items */
+.features-list li::before {
+  content: "•";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+}
+
+/* Responsive styles for mobile devices */
 @media (max-width: 768px) {
   .about-page {
     padding: 2rem 1rem;
@@ -92,27 +131,4 @@
   .about-section h2 {
     font-size: 1.3rem;
   }
-}
-
-.about-content {
-  margin-top: 2rem;
-}
-
-.features-list {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0;
-}
-
-.features-list li {
-  margin: 0.5rem 0;
-  padding-left: 1.5rem;
-  position: relative;
-}
-
-.features-list li::before {
-  content: "•";
-  color: var(--primary-color);
-  position: absolute;
-  left: 0;
 }
