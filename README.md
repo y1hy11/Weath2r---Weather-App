@@ -96,11 +96,4 @@ Project Link: [https://github.com/Y1hy11/Weath2r---Weather-App](https://github.c
 
 ---
 
-<p align="center">If you found this project helpful, please consider giving it a <span style="display: inline-block; animation: starbeat 1.5s ease infinite;">⭐</span></p>
-
-<style>
-@keyframes starbeat {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.3); }
-}
-</style>
+<p align="center">If you found this project helpful, please consider giving it a ⭐</p>
