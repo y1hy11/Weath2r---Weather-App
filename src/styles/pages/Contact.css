@@ -1,16 +1,19 @@
+/* Main container styles */
 .contact-page {
   max-width: 800px;
   margin: 4rem auto;
   padding: 2rem;
 }
 
+/* Page title styles */
 .contact-page h1 {
   font-size: clamp(2rem, 5vw, 3rem);
   text-align: center;
   margin-bottom: 1rem;
-  color:  var(--primary-color);
+  color: var(--primary-color);
 }
 
+/* Introduction text styles */
 .contact-intro {
   text-align: center;
   color: var(--text-light);
@@ -19,10 +22,12 @@
   line-height: 1.6;
 }
 
+/* Dark mode intro text adjustment */
 .dark-mode .contact-intro {
   color: var(--text-dark);
 }
 
+/* Form container styles */
 .contact-form {
   background: var(--bg-light);
   padding: 2rem;
@@ -31,16 +36,19 @@
   border: 1px solid rgba(var(--primary-color-rgb), 0.1);
 }
 
+/* Dark mode form container adjustments */
 .dark-mode .contact-form {
   background: var(--bg-dark);
   border-color: rgba(var(--primary-color-rgb), 0.2);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Form field group styles */
 .form-group {
   margin-bottom: 1.5rem;
 }
 
+/* Form label styles */
 .form-group label {
   display: block;
   margin-bottom: 0.8rem;
@@ -48,10 +56,12 @@
   font-weight: 500;
 }
 
+/* Dark mode label adjustments */
 .dark-mode .form-group label {
   color: var(--text-dark);
 }
 
+/* Input and textarea styles */
 .form-group input,
 .form-group textarea {
   width: 100%;
@@ -63,6 +73,7 @@
   transition: all 0.3s ease;
 }
 
+/* Dark mode input/textarea adjustments */
 .dark-mode .form-group input,
 .dark-mode .form-group textarea {
   background: var(--bg-dark);
@@ -70,6 +81,7 @@
   border-color: rgba(var(--primary-color-rgb), 0.3);
 }
 
+/* Focus states for form elements */
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: var(--primary-color);
@@ -77,11 +89,13 @@
   outline: none;
 }
 
+/* Textarea specific styles */
 .form-group textarea {
   min-height: 150px;
   resize: vertical;
 }
 
+/* Form validation and error styles */
 .form-group .error-message {
   display: none;
   font-size: 0.9rem;
@@ -89,16 +103,19 @@
   margin-top: 0.5rem;
 }
 
+/* Error message display logic */
 .form-group input:invalid + .error-message,
 .form-group textarea:invalid + .error-message {
   display: block;
 }
 
+/* Invalid input styles */
 .form-group input:invalid,
 .form-group textarea:invalid {
   border-color: #ff4757;
 }
 
+/* Error message styling */
 .form-group .error-message {
   color: #ffffff;
   font-size: 0.85rem;
@@ -107,16 +124,19 @@
   animation: fadeIn 0.3s ease;
 }
 
+/* Error state styles */
 .form-group input.error,
 .form-group textarea.error {
   border-color: #ff4757;
 }
 
+/* Animation keyframes */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-5px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Submit button styles */
 .submit-button {
   width: 100%;
   padding: 1rem;
@@ -132,22 +152,26 @@
   overflow: hidden;
 }
 
+/* Submit button hover effects */
 .submit-button:hover {
   background: var(--secondary-color);
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(var(--primary-color-rgb), 0.2);
 }
 
+/* Dark mode submit button hover */
 .dark-mode .submit-button:hover {
   background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
   box-shadow: 0 4px 15px rgba(var(--primary-color-rgb), 0.3);
 }
 
+/* Submitting state styles */
 .submit-button.submitting {
   opacity: 0.7;
   cursor: not-allowed;
 }
 
+/* Form submission message styles */
 .submit-message {
   text-align: center;
   padding: 1rem;
@@ -156,33 +180,39 @@
   animation: slideDown 0.3s ease;
 }
 
+/* Success message styles */
 .submit-message.success {
   background: rgba(46, 213, 115, 0.1);
   color: #2ed573;
   border: 1px solid rgba(46, 213, 115, 0.2);
 }
 
+/* Dark mode success message */
 .dark-mode .submit-message.success {
   background: rgba(46, 213, 115, 0.15);
   color: #40e587;
 }
 
+/* Error message styles */
 .submit-message.error {
   background: rgba(255, 71, 87, 0.1);
   color: #ff4757;
   border: 1px solid rgba(255, 71, 87, 0.2);
 }
 
+/* Dark mode error message */
 .dark-mode .submit-message.error {
   background: rgba(255, 71, 87, 0.15);
   color: #ff6b6b;
 }
 
+/* Slide animation keyframes */
 @keyframes slideDown {
   from { transform: translateY(-10px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
 
+/* Responsive styles for mobile devices */
 @media (max-width: 768px) {
   .contact-page {
     margin: 2rem auto;
